@@ -56,6 +56,17 @@
         "button_link": "shopify://collections/all"
       }
     },
+    "top_new_ijxNRF": {
+      "type": "top-new",
+      "name": "top-new_item",
+      "settings": {
+        "title": "NEW ITEM",
+        "subTitle": "新商品",
+        "recommend": "new",
+        "button": "すべてを表示する",
+        "button_link": "shopify://collections/new"
+      }
+    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
@@ -91,6 +102,7 @@
     "top_about_YjqzyA",
     "top_brand_PcLkH4",
     "top_ranking_EKjAz6",
+    "top_new_ijxNRF",
     "featured_collection"
   ]
 }
