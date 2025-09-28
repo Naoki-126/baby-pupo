@@ -1,0 +1,79 @@
+<section class="about">
+  <div class="about-bg"></div>
+  <div class="page-inner content-inner">
+    <div class="about-contents">
+      <div class="about-imgArea">
+        {% if section.settings.image %}
+          <img src="{{ section.settings.image | image_url: width: 746 }}" alt="{{ section.settings.image.alt | default: 'メイン画像' | escape }}" class="about-img">
+        {% else %}
+          <img src="{{ 'no-image.png' | asset_url }}" class="top-fv__img" alt="代替画像">
+        {% endif  %}
+      </div>
+      <div class="about-txtArea">
+        <div class="c-ttlArea">
+          <h2 class="c-title">{{ section.settings.title }}</h2>
+          <p class="c-subTitle">{{ section.settings.subTitle }}</p>
+        </div>
+        <div class="about-text">
+          <p class="c-text">{{ section.settings.text | newline_to_br }}</p>
+        </div>
+        <div class="about-btnArea">
+          {% if section.settings.button != blank and section.settings.button_link != blank %}
+            <a href="{{ section.settings.button_link }}" class="c-btn">{{ section.settings.button }}</a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    <div class="about-bg"></div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "about",
+  "tag": "section",
+  "class":"top_about",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "image_picker",
+      "id":"image",
+      "label": "画像"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "タイトル",
+      "default": "ABOUT"
+    },
+    {
+      "type": "text",
+      "id": "subTitle",
+      "label": "サブタイトル",
+      "default": "私たちについて"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "テキスト",
+    },
+    {
+      "type": "text",
+      "id":"button",
+      "label": "ボタンのテキスト"
+    },
+    {
+    "type": "url",
+    "id": "button_link",
+    "label": "ボタンリンク先"
+  }
+  ],
+  "presets": [
+    {
+      "name": "top-about"
+    }
+  ]
+}
+{% endschema %}

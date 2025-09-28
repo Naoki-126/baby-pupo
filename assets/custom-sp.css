@@ -1,0 +1,263 @@
+/* base.cssに適用 */
+@charset "UTF-8";
+
+/* ===========================
+#  レスポンシブ対応
+=========================== */
+@media screen and (max-width: 768px) {
+
+  /* common
+  =========================== */
+  .content-inner {
+	padding: 0 16px;
+  }
+
+  .c-title  {
+    font-size: 32px;
+  }
+
+  /* header
+  =========================== */
+  .header-area {
+    height: 80px;
+  }
+
+  .header-cart {
+    width: 80px;
+  }
+
+  .header-upper {
+    display: none;
+  }
+
+  .header-upper__ttlArea {
+    display: none;
+  }
+
+  .header-upper__menuArea {
+    display: none;
+  }
+
+  .header-lower {
+    border-top: .5px solid transparent;
+    flex-direction: column;
+  }
+
+  .header-lower__navArea {
+    display:none;
+  }
+
+  .drawer-icon {
+    display: inline-block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 16px;
+    width: 36px;
+    height: 30px;
+    padding: 6px;
+    cursor: pointer;
+  }
+
+  .drawer-icon__bar {
+    display: block;
+    height: 3px;
+    background: var(--color-primary);
+    margin: 4px 0;
+    border-radius: 2px;
+  }
+
+  /* footer
+  =========================== */
+  .footer-up {
+    padding: 40px 16px;
+  }
+
+  .footer-up__wrap {
+    margin-top: 40px;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .footer-logo {
+    width: 75%;
+  }
+
+  .footer-low__wrap {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* fvセクション
+  =========================== */
+  .fv-img {
+    aspect-ratio: 4 / 5;
+    min-height: 60vh;
+  }
+
+  .fv-txtArea {
+    top: 42%;
+    left: 20%;
+  }
+
+  .fv-logo {
+    width: 75%;
+  }
+
+  .fv-text {
+    margin-top: 20px;
+  }
+
+  /*  movieセクション
+  =========================== */
+  .movie {
+    margin-top: 60px;
+  }
+
+  /* aboutセクション
+  =========================== */
+  .about {
+    margin-top: 60px;
+  }
+
+  .about::after {
+    right: -14px;
+  }
+
+  .about-contents {
+    padding-top: 60px;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .about-txtArea {
+    width: 100%;
+    margin-top: 0;
+    text-align: center;
+  }
+
+  .about-text {
+    margin: 36px auto 0;
+    text-align: left;
+  }
+
+  .about-imgArea {
+    width: 100%;
+  }
+
+  .about-bg  {
+    display: none !important;
+  }
+
+  /* brand
+  =========================== */
+  .brand {
+    padding: 60px 0;
+  }
+
+  .brand-contents {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .brand-ttlArea {
+    width: 100%;
+  }
+
+  .brand-txtArea {
+    width: 100%;
+  }
+
+  .brand-text {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  .brand-btnArea {
+    text-align: center;
+  }
+
+  /* rankingセクション
+  =========================== */
+  .ranking {
+    margin-top: 60px;
+  }
+
+  .ranking-items {
+    grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+    gap: 30px 10px;
+  }
+
+  .ranking-btnArea {
+    margin-top: 60px;
+  }
+
+  .label-ranking {
+    top: -18px;
+    left: -19px;
+    width: 37px;
+    height: 35px;
+  }
+
+  .label-number {
+    font-size: 18px;
+  }
+
+  /* categoryセクション
+  =========================== */
+  .category {
+    margin-top: 60px;
+  }
+
+  .category-contents {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .category-name {
+    font-size: 20px;
+  }
+
+  /* infoセクション
+  =========================== */
+  .info {
+    margin-top: 60px;
+  }
+
+  .info-content {
+    padding: -24px 16px;
+  }
+
+  .info-contentEven {
+    padding: -24px 16px;
+  }
+
+  .info-article {
+    gap: 30px;
+  }
+
+
+}
+
+/* ===========================
+#  ドロワー
+=========================== */
+.drawer-contents {
+  width: 240px;
+	height: auto;
+	background: #D5D5D5;
+	border: 1px solid  #292929;
+	border-radius: 12px;
+	position: fixed;
+	top: 72px;
+	left: 16px;
+	z-index: 50;
+	transform: translateX(-110%);
+	transition: transform 0.3s linear;
+}
+
+.drawer-contents.is-checked {
+	transform: translateX(0);
+}

@@ -1,0 +1,90 @@
+<section class="ranking">
+  <div class="page-inner content-inner">
+    <div class="ranking-ttlArea">
+      <div class="c-ttlArea">
+        <h2 class="c-title">{{ section.settings.title }}</h2>
+        <p class="c-subTitle">{{ section.settings.subTitle }}</p>
+      </div>
+    </div>
+
+    {% assign ranked_products = collections.all.products | sort: "metafields.custom.view_count.value" | reverse %}
+    <ul class="ranking-items">
+      {% for product in ranked_products limit: 4 %}
+        <li class="ranking-item">
+          <a href="{{ product.url }}">
+            <img src="{{ product | image_url: width: 304 }}" alt="{{ product.title }}" class="list-img">
+
+            <div class="label-ranking">
+              {% case forloop.index %}
+              {% when 1 %}
+                <img src="{{ 'star1.png' | asset_url }}" alt="1位" class="star-label">
+                <span class="label-number">1</span>
+              {% when 2 %}
+                <img src="{{ 'star2.png' | asset_url }}" alt="2位" class="star-label">
+                <span class="label-number">2</span>
+              {% when 3 %}
+                <img src="{{ 'star3.png' | asset_url }}" alt="3位" class="star-label">
+                <span class="label-number">3</span>
+              {% when 4 %}
+                <img src="{{ 'star4.png' | asset_url }}" alt="4位" class="star-label">
+                <span class="label-number">4</span>
+              {% endcase %}
+            </div>
+
+            <div class="ranking-textArea">
+              <h4 class="product-name"><span class="option-tag">オススメ</span>{{ product.title }}</h4>
+              <div class="product-price">{{ product.price | money }}(税込)</div>
+              <div class="view-count">閲覧数: {{ product.metafields.custom.view_count.value }}</div>
+            </div>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+    
+    <div class="ranking-btnArea">
+      {% if section.settings.button != blank and section.settings.button_link != blank %}
+        <a href="{{ section.settings.button_link }}" class="c-btn">{{ section.settings.button }}</a>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "ranking",
+  "tag": "section",
+  "class": "top-rec",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id":"title",
+      "label": "タイトル",
+      "default": "RANKING"
+    },
+    {
+      "type": "text",
+      "id":"subTitle",
+      "label": "サブタイトル",
+      "default": "人気商品ランキング"
+    },
+    {
+      "type": "text",
+      "id":"button",
+      "label": "ボタンのテキスト"
+    },
+    {
+    "type": "url",
+    "id": "button_link",
+    "label": "ボタンリンク先"
+  },
+  ],
+  "presets": [
+    {
+      "name":"top-ranking"
+    }
+  ]
+}
+{% endschema %}

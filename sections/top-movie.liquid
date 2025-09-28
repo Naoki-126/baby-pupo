@@ -1,0 +1,36 @@
+<section class="movie">
+  <div class="page-inner content-inner">
+    <div class="movie-videoArea">
+      {% if section.settings.youtube_url != blank %}
+      {% assign youtube_id = section.settings.youtube_url | split: "V=" | last |  split: "&" | first   %}
+        <iframe width="1000" height="500"  src="https://www.youtube.com/embed/{{ youtube_id }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="movie-video"></iframe>
+      {% else %}
+      <p>動画URLを入力してください</p>
+    {% endif %}
+  </div>
+      </div>
+      </section>
+
+{% schema %}
+{
+  "name": "Movie Video",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "youtube_url",
+      "label": "YouTube URL"
+    },
+  ],
+  "presets": [
+    {
+      "name": "Movie Video"
+    }
+  ]
+}
+{% endschema %}
+
+

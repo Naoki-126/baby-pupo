@@ -1,0 +1,71 @@
+<section class="fv">
+  <div class="page-inner">
+    <div class="swiper fv-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="fv-area">
+            {% if section.settings.image %}
+              <img src="{{ section.settings.image | image_url: width: 1920 }}" alt="mv-1" class="fv-img">
+            {% endif %}
+
+            <div class="fv-txtArea">
+              <h2 class="fv-logoArea"><img src="{{ 'logo_kumataro.png' |  asset_url }}" alt="kumataro" class="fv-logo"></h2>
+              <p class="fv-text">Kumataroも架空ブランドです。<br>話しかけるとお喋りする奇妙な<br>ぬいぐるみです。</p>
+              <div class="fv-btnArea">
+                <a href="" class="c-btn">商品をみにいく</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% comment %} <div class="swiper-slide">
+          <div class="fv-area">
+            <img src="./assets/mv-2.png" alt="mv-2" class="fv-img">
+            <div class="fv-txtArea">
+              <h2 class="fv-logoArea"><img src="./assets/logo_usa.png" alt="usa" class="fv-logo2"></h2>
+              <p class="fv-text">USAGIMARUはうさぎモチーフの<br>架空おもちゃブランドです。</p>
+              <div class="fv-btnArea">
+                <a href="" class="c-btn">商品をみにいく</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="fv-area">
+            <img src="./assets/mv-3.png" alt="mv-3" class="fv-img">
+            <div class="fv-txtArea">
+              <h2 class="fv-logoArea"><img src="./assets/logo_nemurin.png" alt="nemurin" class="fv-logo3"></h2>
+              <p class="fv-text">NEMURINも<br>架空のベビー寝具ブランドです。<br>本当にあったらいいな。</p>
+              <div class="fv-btnArea">
+                <a href="" class="c-btn">商品をみにいく</a>
+              </div>
+            </div>
+          </div>
+        </div> {% endcomment %}
+
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "FV画像",
+  "tag": "section",
+  "class": "fv-area",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "FV画像"
+    },
+  ],
+  "presets": [
+    {
+      "name": "トップFV画像"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,67 @@
+<section class="brand">
+  <div class="content-inner">
+    <div class="brand-contents">
+      <div class="brand-ttlArea">
+        <div class="c-ttlArea">
+          <h2 class="c-title">{{ section.settings.title }}</h2>
+          <p class="c-subTitle">{{ section.settings.subTitle }}</p>
+        </div>
+      </div>
+      <div class="brand-txtArea">
+        <div class="brand-text">
+          <p class="c-text">{{ section.settings.text | newline_to_br }}</p>
+        </div>
+        <div class="brand-btnArea">
+          {% if section.settings.button != blank and section.settings.button_link != blank %}
+            <a href="{{ section.settings.button_link }}" class="c-btn">{{ section.settings.button }}</a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "brand",
+  "tag": "section",
+  "class":"top_about",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "タイトル",
+      "default": "BRAND"
+    },
+    {
+      "type": "text",
+      "id": "subTitle",
+      "label": "サブタイトル",
+      "default": "取り扱いブランド"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "テキスト",
+    },
+    {
+      "type": "text",
+      "id":"button",
+      "label": "ボタンのテキスト"
+    },
+    {
+    "type": "url",
+    "id": "button_link",
+    "label": "ボタンリンク先"
+  }
+  ],
+  "presets": [
+    {
+      "name": "top-brand"
+    }
+  ]
+}
+{% endschema %}
