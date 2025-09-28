@@ -94,6 +94,90 @@
         "padding_top": 44,
         "padding_bottom": 36
       }
+    },
+    "top_category_QNFJmk": {
+      "type": "top-category",
+      "blocks": {
+        "image_kgzDME": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/category-img1.png",
+            "collection": "toys"
+          }
+        },
+        "image_6p7i6H": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/category-img2.png",
+            "collection": "styles"
+          }
+        },
+        "image_DineH7": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/mv-3.png",
+            "collection": "beds"
+          }
+        },
+        "image_gGxpwT": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/category-img4.png",
+            "collection": "diapers"
+          }
+        },
+        "image_UVD4tL": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/category-img5.png",
+            "collection": "landries"
+          }
+        },
+        "image_RXPGV4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/category-img6.png",
+            "collection": "bath"
+          }
+        },
+        "image_B9DFjF": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/category-img7.png",
+            "collection": "sweets"
+          }
+        },
+        "image_m7DVF7": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/category-img8.png",
+            "collection": "tablewears"
+          }
+        },
+        "image_X4mMym": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/category-img9.png",
+            "collection": "gifts"
+          }
+        }
+      },
+      "block_order": [
+        "image_kgzDME",
+        "image_6p7i6H",
+        "image_DineH7",
+        "image_gGxpwT",
+        "image_UVD4tL",
+        "image_RXPGV4",
+        "image_B9DFjF",
+        "image_m7DVF7",
+        "image_X4mMym"
+      ],
+      "name": "top-category",
+      "settings": {
+        "title": "CATEGORY",
+        "subTitle": "商品カテゴリー"
+      }
     }
   },
   "order": [
@@ -103,6 +187,7 @@
     "top_brand_PcLkH4",
     "top_ranking_EKjAz6",
     "top_new_ijxNRF",
-    "featured_collection"
+    "featured_collection",
+    "top_category_QNFJmk"
   ]
 }
