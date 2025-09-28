@@ -11,8 +11,42 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
+    "footer_custom_pPXBje": {
+      "type": "footer-custom",
+      "blocks": {
+        "sns_icon_TUX9Jq": {
+          "type": "sns_icon",
+          "settings": {
+            "sns_type": "facebook",
+            "sns_link": ""
+          }
+        },
+        "sns_icon_bVDMbG": {
+          "type": "sns_icon",
+          "settings": {
+            "sns_type": "x",
+            "sns_link": ""
+          }
+        },
+        "sns_icon_edV6At": {
+          "type": "sns_icon",
+          "settings": {
+            "sns_type": "youtube",
+            "sns_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "sns_icon_TUX9Jq",
+        "sns_icon_bVDMbG",
+        "sns_icon_edV6At"
+      ],
+      "name": "カスタムフッター",
+      "settings": {}
+    },
     "footer": {
       "type": "footer",
+      "disabled": true,
       "settings": {
         "color_scheme": "scheme-1",
         "newsletter_enable": true,
@@ -30,6 +64,7 @@
     }
   },
   "order": [
+    "footer_custom_pPXBje",
     "footer"
   ]
 }

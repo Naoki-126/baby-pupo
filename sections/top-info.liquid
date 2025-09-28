@@ -1,0 +1,75 @@
+ <section class="info">
+    <div class="info-ttlArea">
+      <div class="c-ttlArea">
+        <h2 class="c-title">{{ section.settings.title }}</h2>
+        <p class="c-subTitle">{{ section.settings.subTitle }}</p>
+      </div>
+    </div>
+    <ul class="info-contents">
+      <li class="info-content">
+        <a href="" class="info-link">
+          <div class="info-article">
+            <div class="info-date">20xx,xx,xx</div>
+            <div class="info-title">新しい商品入荷しました!</div>
+          </div>
+        </a>
+      </li>
+      <li class="info-contentEven">
+        <a href="" class="info-link">
+          <div class="info-article">
+            <div class="info-date">20xx,xx,xx</div>
+            <div class="info-title">新しい商品入荷しました!</div>
+          </div>
+        </a>
+      </li>
+      <li class="info-content">
+        <a href="" class="info-link">
+          <div class="info-article">
+            <div class="info-date">20xx,xx,xx</div>
+            <div class="info-title">新しい商品入荷しました!</div>
+          </div>
+        </a>
+      </li>
+    </ul>
+    <div class="info-btnArea">
+      <a href="" class="c-btn">お知らせ一覧</a>
+    </div>
+  </section>
+
+{% schema %}
+{
+  "name": "infomation",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "セクションタイトル",
+      "default": "INFORMATION"
+    },
+    {
+      "type": "text",
+      "id":"subTitle",
+      "label": "サブタイトル",
+      "default": "インフォメーション"
+    },
+    {
+      "type": "text",
+      "id": "button",
+      "label": "ボタンのテキスト"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "ボタンリンク先"
+    }
+  ],
+  "presets": [
+    {
+      "name": "top-info"
+    }
+  ]
+}
+{% endschema %}

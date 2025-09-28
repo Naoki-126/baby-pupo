@@ -1,0 +1,71 @@
+<section class="insta">
+  <div class="page-inner content-inner">
+    <div class="insta-ttlArea">
+      <div class="c-ttlArea">
+        <h2 class="c-title">{{ section.settings.title }}</h2>
+        <p class="c-subTitle">@instagram_123</p>
+      </div>
+    </div>
+    <ul class="insta-contents">
+      {% for block in section.blocks %}
+        <li class="insta-content" {{ block.shopify_attributes }}>
+          <a href="{{ block.settings.link }}" target="_blank" rel="noopener" >
+            {% if block.settings.image %}
+              <img src="{{ block.settings.image |  image_url: width: 180 }}" alt="insta-img" class="insta-img">
+            {% else %}
+            {% endif %}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Instaギャラリー",
+  "tag": "section",
+  "class": "top__sns",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "タイトル",
+      "default": "INSTAGRAM"
+    },
+    {
+      "type": "text",
+      "id": "sub_title",
+      "label": "サブタイトル",
+      "default": "@instagram_123"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image_link",
+      "name": "Instagram画像リンク",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "画像"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "InstagramのURL",
+        }
+      ]
+    }
+  ],
+  "max_blocks": 12,
+  "presets": [
+    {
+      "name": "Instagramギャラリー"
+    }
+  ]
+}
+{% endschema %}

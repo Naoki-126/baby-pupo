@@ -1,0 +1,182 @@
+<footer clsss="page-inner">
+  <div class="footer-inner">
+    <div class="footer-up">
+      <div class="footer-up__logoArea">
+        <h1><a href="{{ routes.root_url }}"><img src="{{ 'logo.png' | file_img_url: "X190" }}" alt="logo" class="footer-logo"></a></h1>
+        <p class="footer-sub">KAKUUBRAND</p>
+        <div class="footer-up__wrap">
+          <div class="footer-name">株式会社リキッドマスターズ<br>〒111-1234<br>第3新東京市1234-5<br>TEL：0120-123-456<br>営業時間：平日10：00〜17：00<br>定休日：土日祝</div>
+          <nav>
+            <ul class="footer-menus">
+              <li><a href="" class="footer-menu">商品一覧</a></li>
+              <li><a href="" class="footer-menu">商品カテゴリー</a></li>
+              <li><a href="" class="footer-menu">ブランド</a></li>
+              <li><a href="" class="footer-menu">お問合せ</a></li>
+            </ul>
+          </nav>
+          <nav>
+            <ul class="footer-info">
+              <li><a href="" class="footer-page">会社概要</a></li>
+              <li><a href="" class="footer-page">お知らせ</a></li>
+              <li><a href="" class="footer-page">FAQ</a></li>
+            </ul>
+          </nav>
+          <div class="footer-contact">
+            <div class="footer-btnArea">
+              <a href="" class="c-btn__footer">お問い合わせ</a>
+            </div>
+            <p class="footer-content__text">メルマガ登録で最新情報をお届け</p>
+            <div class="footer-addressArea">
+              <a href="" class="c-btn__add">メールアドレス入力　→</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-low">
+      <nav>
+        <ul class="footer-low__wrap">
+          <li><a href="" class="footer-low__content">プライバシーポリシー</a></li>
+          <li><a href="" class="footer-low__content">特定商取引法に基づく表記</a></li>
+          <li><a href="" class="footer-low__content">利用規約</a></li>
+        </ul>
+        <ul class="footer-low__snsArea">
+          {% for block in section.blocks %}
+            {% assign sns_type = block.settings.sns_type %}
+            <li>
+              <a href="{{ block.settings.sns_link }}" target="_blank" rel="noopener">
+                {% case sns_type %}
+                {% when 'facebook' %}
+                  {% render 'icon-facebook' %}
+                {% when 'x' %}
+                  {% render 'icon-x' %}
+                {% when 'instagram' %}
+                  {% render 'icon-instagram' %}
+                {% when 'youtube' %}
+                  {% render 'icon-youtube' %}
+                {% endcase %}
+              </a>
+            </li>
+          {% endfor %}
+
+          {% comment %} <img src="{{ 'icon-facebook.svg' asset_url }}" alt="facebook" class="footer-sns" width="12"> {% endcomment %}
+
+          {% comment %} <li><a href=""><img src="./assets/twitter-bird.png" alt="twitter" class="footer-sns" width="25"></a></li>
+          <li><a href=""><img src="./assets/instagram.png" alt="instagram" class="footer-sns" width="21"></a></li>
+          <li><a href=""><img src="./assets/youtube-play.png" alt="youtube-play" class="footer-sns" width="25"></a></li> {% endcomment %}
+        </ul>
+      </nav>
+      <p class="footer-copyright">@2023 BABYPUPO</p>
+    </div>
+  </div>
+</footer>
+
+
+    {% schema %}
+{
+  "name": "customフッター",
+  "tag": "section",
+  "class": "custom-footer",
+  "disabled_on": {
+    "groups": ["header","custom.index","custom.product","custom.collection" ]
+  },
+  "settings": [
+
+  ],
+  "blocks": [
+    {
+      "name": "SNSアイコン",
+      "type": "sns_icon",
+      "settings": [
+        {
+          "type": "select",
+          "id": "sns_type",
+          "label": "SNSタイプ",
+          "options": [
+            { "value": "instagram", "label": "Instagram" },
+            { "value": "line", "label": "LINE" },
+            { "value": "x", "label": "X（旧Twitter）" },
+            { "value": "facebook", "label": "Facebook" },
+            { "value": "youtube", "label": "you tube" }
+          ],
+        },
+        {
+          "type": "url",
+          "id": "sns_link",
+          "label": "リンク先URL",
+        },
+      ]
+    },
+    {
+      "type": "page_link",
+      "name": "ページリンク",
+      "settings": [
+        {
+          "type": "text",
+          "id": "link_title",
+          "label": "リンクタイトル"
+        },
+        {
+          "type": "url",
+          "id": "link_url",
+          "label": "リンク先URL"
+        }
+      ]
+    },
+    {
+      "type": "item",
+      "name": "カテゴリー",
+      "settings": [
+        {
+          "type": "text",
+          "id": "link_collectionTitle",
+          "label": "コレクションタイトル"
+        },
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "コレクション",
+        },
+      ]
+    },
+    {
+      "type": "guide",
+      "name": "ショッピングガイド",
+      "settings": [
+        {
+          "type": "text",
+          "id": "guide_title",
+          "label": "ガイドタイトル"
+        },
+        {
+          "type": "url",
+          "id": "guide_url",
+          "label": "リンク先URL"
+        }
+      ]
+    },
+    {
+      "type": "policy_link",
+      "name": "ポリシーリンク",
+      "settings": [
+        {
+          "type": "text",
+          "id": "link_title",
+          "label": "リンクタイトル"
+        },
+        {
+          "type": "url",
+          "id": "link_url",
+          "label": "リンク先URL"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name":"カスタムフッター",
+      "category": "フッター"
+    }
+  ]
+}
+{% endschema %}

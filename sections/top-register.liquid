@@ -1,0 +1,64 @@
+<section class="register">
+  <div class="content-inner">
+    <div class="register-ttlArea">
+      <div class="c-ttlArea">
+        <h2 class="c-title">{{ section.settings.title | newline_to_br }}</h2>
+        <p class="c-subTitle">{{ section.settings.subTitle }}</p>
+      </div>
+    </div>
+    <div class="register-contents">
+      <p class="register-content">{{ section.settings.text | newline_to_br }}</p>
+    </div>
+    <div class="register-btnArea">
+      {% if section.settings.button != blank and section.settings.button_link != blank %}
+        <a href="{{ section.settings.button_link }}" class="c-btn">{{ section.settings.button }}</a>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+
+{% schema %}
+{
+  "name": "register",
+  "tag": "section",
+  "class":"top_about",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "title",
+      "label": "タイトル",
+      "default": "CORPORATE CASTOMER"
+    },
+    {
+      "type": "text",
+      "id": "subTitle",
+      "label": "サブタイトル",
+      "default": "卸売用新規登録"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "テキスト",
+    },
+    {
+      "type": "text",
+      "id":"button",
+      "label": "ボタンのテキスト"
+    },
+    {
+    "type": "url",
+    "id": "button_link",
+    "label": "ボタンリンク先"
+  }
+  ],
+  "presets": [
+    {
+      "name": "top-register"
+    }
+  ]
+}
+{% endschema %}

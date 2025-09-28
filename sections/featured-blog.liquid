@@ -25,10 +25,17 @@
   endif
 -%}
 <div class="blog color-{{ section.settings.color_scheme }} gradient{% if section.settings.heading == blank %} no-heading{% endif %}">
-  <div class="page-width-desktop isolate{% if posts_displayed < 3 %} page-width-tablet{% endif %} section-{{ section.id }}-padding">
+  <div class="page-width-desktop isolate{% if posts_displayed < 3 %} page-width-tablet{% endif %} section-{{ section.id }}-padding" style="padding:0;" >
     {%- unless section.settings.heading == blank -%}
       <div class="title-wrapper-with-link{% if posts_displayed > 2 %} title-wrapper--self-padded-tablet-down{% else %} title-wrapper--self-padded-mobile{% endif %} title-wrapper--no-top-margin">
-        <h2
+
+      <div class="blog-ttlArea" style="width: 100%;" >
+        <div class="c-ttlArea">
+          <h2 class="c-title">{{ section.settings.title }}</h2>
+          <p class="c-subTitle">{{ section.settings.subTitle }}</p>
+        </div>
+      </div>
+      {% comment %} <h2
           id="SectionHeading-{{ section.id }}"
           class="blog__title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
           {% if settings.animations_reveal_on_scroll %}
@@ -36,7 +43,7 @@
           {% endif %}
         >
           {{ section.settings.heading }}
-        </h2>
+        </h2> {% endcomment %}
 
         {%- if section.settings.blog != blank
           and section.settings.show_view_all
@@ -57,6 +64,7 @@
         id="Slider-{{ section.id }}"
         class="blog__posts articles-wrapper contains-card contains-card--article{% if settings.blog_card_style == 'standard' %} contains-card--standard{% endif %} grid grid--peek grid--2-col-tablet grid--{{ section.settings.columns_desktop }}-col-desktop slider {% if posts_displayed > 2 %}slider--tablet{% else %}slider--mobile{% endif %}"
         role="list"
+        style="margin: 80px auto 0;"
       >
         {%- if section.settings.blog != blank and section.settings.blog.articles_count > 0 -%}
           {%- for article in section.settings.blog.articles limit: section.settings.post_limit -%}
@@ -199,6 +207,18 @@
   },
   "settings": [
     {
+      "type": "text",
+      "id":"title",
+      "label": "タイトル",
+      "default": "BLOG"
+    },
+    {
+      "type": "text",
+      "id":"subTitle",
+      "label": "サブタイトル",
+      "default": "ブログ"
+    },
+    {
       "type": "blog",
       "id": "blog",
       "label": "t:sections.featured-blog.settings.blog.label"
@@ -215,7 +235,7 @@
     {
       "type": "header",
       "content": "t:sections.featured-blog.settings.text_header.content"
-    },            
+    },
     {
       "type": "inline_richtext",
       "id": "heading",
@@ -253,7 +273,7 @@
     {
       "type": "header",
       "content": "t:sections.featured-blog.settings.layout_header.content"
-    },        
+    },
     {
       "type": "range",
       "id": "columns_desktop",
@@ -269,7 +289,7 @@
       "default": true,
       "label": "t:sections.featured-blog.settings.show_view_all.label",
       "info": "t:sections.featured-blog.settings.show_view_all.info"
-    },    
+    },
     {
       "type": "checkbox",
       "id": "show_image",
@@ -294,7 +314,7 @@
       "label": "t:sections.all.colors.label",
       "info": "t:sections.all.colors.has_cards_info",
       "default": "scheme-1"
-    },    
+    },
     {
       "type": "header",
       "content": "t:sections.all.padding.section_padding_heading"
@@ -322,7 +342,8 @@
   ],
   "presets": [
     {
-      "name": "t:sections.featured-blog.presets.name"
+      // "name": "t:sections.featured-blog.presets.name"
+      "name": "top-blog"
     }
   ]
 }

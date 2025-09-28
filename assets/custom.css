@@ -905,7 +905,7 @@ body {
 	width: 100%;
 	margin-top: 160px;
 	padding: 80px 0;
-	background: url(/assets/banner-img.png)no-repeat center center /cover;
+	background: url(../assets/banner-img.png)no-repeat center center /cover;
 }
 
 .register-ttlArea {

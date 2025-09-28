@@ -67,34 +67,6 @@
         "button_link": "shopify://collections/new"
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
-      "settings": {
-        "collection": "all",
-        "products_to_show": 8,
-        "title": "Featured products",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "columns_desktop": 4,
-        "enable_desktop_slider": false,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "color_scheme": "scheme-1",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 44,
-        "padding_bottom": 36
-      }
-    },
     "top_category_QNFJmk": {
       "type": "top-category",
       "blocks": {
@@ -178,6 +150,128 @@
         "title": "CATEGORY",
         "subTitle": "商品カテゴリー"
       }
+    },
+    "featured_blog_bitBhi": {
+      "type": "featured-blog",
+      "name": "top-blog",
+      "settings": {
+        "title": "BLOG",
+        "subTitle": "ブログ",
+        "blog": "",
+        "post_limit": 3,
+        "heading": "ブログ記事",
+        "heading_size": "h1",
+        "columns_desktop": 3,
+        "show_view_all": true,
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "top_info_c7qytr": {
+      "type": "top-info",
+      "name": "top-info",
+      "settings": {
+        "title": "INFORMATION",
+        "subTitle": "インフォメーション",
+        "button": "",
+        "button_link": ""
+      }
+    },
+    "top_instagram_8WgpGV": {
+      "type": "top-instagram",
+      "blocks": {
+        "image_link_hnbkVF": {
+          "type": "image_link",
+          "settings": {
+            "image": "shopify://shop_images/insta-img1.png",
+            "link": ""
+          }
+        },
+        "image_link_JFhpGw": {
+          "type": "image_link",
+          "settings": {
+            "image": "shopify://shop_images/insta-img2.png",
+            "link": ""
+          }
+        },
+        "image_link_TBMhdm": {
+          "type": "image_link",
+          "settings": {
+            "image": "shopify://shop_images/insta-img5.png",
+            "link": ""
+          }
+        },
+        "image_link_g4qiVC": {
+          "type": "image_link",
+          "settings": {
+            "image": "shopify://shop_images/insta-img3.png",
+            "link": ""
+          }
+        },
+        "image_link_jAF6Nr": {
+          "type": "image_link",
+          "settings": {
+            "image": "shopify://shop_images/insta-img4.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_link_hnbkVF",
+        "image_link_JFhpGw",
+        "image_link_TBMhdm",
+        "image_link_g4qiVC",
+        "image_link_jAF6Nr"
+      ],
+      "name": "Instagramギャラリー",
+      "settings": {
+        "title": "INSTAGRAM",
+        "sub_title": "@instagram_123"
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "collection": "all",
+        "products_to_show": 8,
+        "title": "Featured products",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 44,
+        "padding_bottom": 36
+      }
+    },
+    "top_register_VLtRAE": {
+      "type": "top-register",
+      "name": "top-register",
+      "settings": {
+        "title": "CORPORATE\nCASTOMER",
+        "subTitle": "卸売用新規登録",
+        "text": "法人様向けの製品もお取り扱いしております\n新規ご登録お待ちしております。",
+        "button": "ご登録はこちらから",
+        "button_link": "shopify://pages/contact"
+      }
     }
   },
   "order": [
@@ -187,7 +281,11 @@
     "top_brand_PcLkH4",
     "top_ranking_EKjAz6",
     "top_new_ijxNRF",
+    "top_category_QNFJmk",
+    "featured_blog_bitBhi",
+    "top_info_c7qytr",
+    "top_instagram_8WgpGV",
     "featured_collection",
-    "top_category_QNFJmk"
+    "top_register_VLtRAE"
   ]
 }
