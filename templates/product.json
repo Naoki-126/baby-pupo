@@ -99,10 +99,22 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "top_register_rFRKU3": {
+      "type": "top-register",
+      "name": "top-register",
+      "settings": {
+        "title": "CORPORATE CASTOMER",
+        "subTitle": "卸売用新規登録",
+        "text": "法人様向けの製品もお取り扱いしております\n新規ご登録お待ちしております。",
+        "button": "ご登録はこちらから",
+        "button_link": "shopify://pages/contact"
+      }
     }
   },
   "order": [
     "main",
-    "related-products"
+    "related-products",
+    "top_register_rFRKU3"
   ]
 }

@@ -1,44 +1,65 @@
- <section class="info">
+{{ 'component-article-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'section-main-blog.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+
+  <div class="main-blog page-width section-{{ section.id }}-padding info">
+    {% comment %} <h1 class="title--primary{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">{{ blog.title | escape }}</h1> {% endcomment %}
+
     <div class="info-ttlArea">
       <div class="c-ttlArea">
         <h2 class="c-title">{{ section.settings.title }}</h2>
         <p class="c-subTitle">{{ section.settings.subTitle }}</p>
       </div>
     </div>
-    <ul class="info-contents">
-      <li class="info-content">
-        <a href="" class="info-link">
-          <div class="info-article">
-            <div class="info-date">20xx,xx,xx</div>
-            <div class="info-title">新しい商品入荷しました!</div>
+
+    {%- assign news_blog = blogs['news'] -%}
+    {%- if news_blog.articles_count > 0 -%}
+      <div class="blog-articles {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %} info-contents">
+
+        {%- for article in news_blog.articles limit: 6 -%}
+          {%- assign even = forloop.index0 | modulo: 2 -%}
+          {%- if even == 1 -%}
+          <div class="info-contentEven">
+          {%- else -%}
+          <div class="info-content">
+          {%- endif -%}
+            <a href="{{ article.url }}" class="info-link">
+              <div class="info-article">
+                <div class="info-date">{{ article.published_at | date: "%Y年%m月%d日" }}</div>
+                <div class="info-title">{{ article.title }}</div>
+              </div>
+            </a>
           </div>
-        </a>
-      </li>
-      <li class="info-contentEven">
-        <a href="" class="info-link">
-          <div class="info-article">
-            <div class="info-date">20xx,xx,xx</div>
-            <div class="info-title">新しい商品入荷しました!</div>
-          </div>
-        </a>
-      </li>
-      <li class="info-content">
-        <a href="" class="info-link">
-          <div class="info-article">
-            <div class="info-date">20xx,xx,xx</div>
-            <div class="info-title">新しい商品入荷しました!</div>
-          </div>
-        </a>
-      </li>
-    </ul>
+        {%- endfor -%}
+
+      </div>
+    {%- endif -%}
     <div class="info-btnArea">
-      <a href="" class="c-btn">お知らせ一覧</a>
+      {% if section.settings.button != blank and section.settings.button_link != blank %}
+        <a href="{{ section.settings.button_link }}" class="c-btn">{{ section.settings.button }}</a>
+      {% endif %}
     </div>
-  </section>
+  </div>
+
 
 {% schema %}
 {
-  "name": "infomation",
+  "name": "お知らせ",
   "disabled_on": {
     "groups": ["header", "footer"]
   },

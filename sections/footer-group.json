@@ -28,6 +28,13 @@
             "sns_link": ""
           }
         },
+        "sns_icon_RBqQeh": {
+          "type": "sns_icon",
+          "settings": {
+            "sns_type": "instagram",
+            "sns_link": ""
+          }
+        },
         "sns_icon_edV6At": {
           "type": "sns_icon",
           "settings": {
@@ -39,6 +46,7 @@
       "block_order": [
         "sns_icon_TUX9Jq",
         "sns_icon_bVDMbG",
+        "sns_icon_RBqQeh",
         "sns_icon_edV6At"
       ],
       "name": "カスタムフッター",
