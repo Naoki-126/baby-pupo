@@ -171,14 +171,14 @@
         "padding_bottom": 36
       }
     },
-    "top_info_c7qytr": {
+    "top_info_zitET9": {
       "type": "top-info",
       "name": "top-info",
       "settings": {
         "title": "INFORMATION",
         "subTitle": "インフォメーション",
         "button": "お知らせ一覧",
-        "button_link": "shopify://blogs/news"
+        "button_link": "shopify://blogs/info"
       }
     },
     "top_instagram_8WgpGV": {
@@ -254,7 +254,7 @@
     "top_new_ijxNRF",
     "top_category_QNFJmk",
     "featured_blog_bitBhi",
-    "top_info_c7qytr",
+    "top_info_zitET9",
     "top_instagram_8WgpGV",
     "top_register_VLtRAE"
   ]

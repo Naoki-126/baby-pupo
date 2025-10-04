@@ -16,14 +16,9 @@
   }
 {%- endstyle -%}
 
-{% comment %} {%- paginate blog.articles by 6 -%} {% endcomment %}
+{%- paginate blog.articles by 5 -%}
 
   <div class="main-blog page-width section-{{ section.id }}-padding info">
-
-    {% comment %} <h1 class="title--primary{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
-      {{ blog.title | escape }}
-    </h1> {% endcomment %}
-
 
     <div class="info-ttlArea">
       <div class="c-ttlArea">
@@ -32,33 +27,34 @@
       </div>
     </div>
 
-    <div class="blog-articles {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">
-      {%- for article in blog.articles -%}
-        <div
-          class="blog-articles__article article{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-          {% if settings.animations_reveal_on_scroll %}
-            data-cascade
-            style="--animation-order: {{ forloop.index }};"
-          {% endif %}
-        >
-          {%- render 'article-card',
-            article: article,
-            media_height: section.settings.image_height,
-            media_aspect_ratio: article.image.aspect_ratio,
-            show_image: section.settings.show_image,
-            show_date: section.settings.show_date,
-            show_author: section.settings.show_author,
-            show_excerpt: true
-          -%}
-        </div>
-      {%- endfor -%}
-    </div>
+    {%- assign info_blog = blogs['info'] -%}
+    {%- if info_blog.articles_count > 0 -%}
+      <div class="blog-articles {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %} info-contents">
 
-    {% comment %} {%- if paginate.pages > 1 -%}
+        {%- for article in info_blog.articles -%}
+          {%- assign even = forloop.index0 | modulo: 2 -%}
+          {%- if even == 1 -%}
+          <div class="info-contentEven">
+          {%- else -%}
+          <div class="info-content">
+          {%- endif -%}
+              <a href="{{ article.url }}" class="info-link">
+              <div class="info-article">
+                <div class="info-date">{{ article.published_at | date: "%Y年%m月%d日" }}</div>
+                <div class="info-title">{{ article.title }}</div>
+              </div>
+            </a>
+          </div>
+        {%- endfor -%}
+
+      </div>
+    {%- endif -%}
+
+    {%- if paginate.pages > 1 -%}
       {%- render 'pagination', paginate: paginate -%}
-    {%- endif -%} {% endcomment %}
+    {%- endif -%}
   </div>
-{% comment %} {%- endpaginate -%} {% endcomment %}
+{%- endpaginate -%}
 
 
 {% schema %}
@@ -93,7 +89,7 @@
   ],
   "presets": [
     {
-      "name": "information"
+      "name": "info-page"
     }
   ]
 }

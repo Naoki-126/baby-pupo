@@ -45,6 +45,8 @@
           {{ section.settings.heading }}
         </h2> {% endcomment %}
 
+        {% comment %} {%- assign blog = blogs['blog'] -%} {% endcomment %}
+
         {%- if section.settings.blog != blank
           and section.settings.show_view_all
           and section.settings.post_limit < section.settings.blog.articles_count
@@ -342,8 +344,7 @@
   ],
   "presets": [
     {
-      // "name": "t:sections.featured-blog.presets.name"
-      "name": "top-blog"
+      "name": "t:sections.featured-blog.presets.name"
     }
   ]
 }

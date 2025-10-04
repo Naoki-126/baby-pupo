@@ -27,18 +27,18 @@
       </div>
     </div>
 
-    {%- assign news_blog = blogs['news'] -%}
-    {%- if news_blog.articles_count > 0 -%}
+    {%- assign info_blog = blogs['info'] -%}
+    {%- if info_blog.articles_count > 0 -%}
       <div class="blog-articles {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %} info-contents">
 
-        {%- for article in news_blog.articles limit: 6 -%}
+        {%- for article in info_blog.articles limit: 3 -%}
           {%- assign even = forloop.index0 | modulo: 2 -%}
           {%- if even == 1 -%}
           <div class="info-contentEven">
           {%- else -%}
           <div class="info-content">
           {%- endif -%}
-            <a href="{{ article.url }}" class="info-link">
+              <a href="{{ article.url }}" class="info-link">
               <div class="info-article">
                 <div class="info-date">{{ article.published_at | date: "%Y年%m月%d日" }}</div>
                 <div class="info-title">{{ article.title }}</div>
