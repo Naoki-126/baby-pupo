@@ -151,24 +151,20 @@
         "subTitle": "商品カテゴリー"
       }
     },
-    "featured_blog_bitBhi": {
+    "featured_blog_XDTjAM": {
       "type": "featured-blog",
-      "name": "top-blog",
+      "name": "t:sections.featured-blog.presets.name",
       "settings": {
         "title": "BLOG",
         "subTitle": "ブログ",
-        "blog": "",
-        "post_limit": 3,
-        "heading": "ブログ記事",
-        "heading_size": "h1",
+        "blog": "blog",
         "columns_desktop": 3,
         "show_view_all": true,
         "show_image": true,
-        "show_date": true,
+        "show_date": false,
         "show_author": false,
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "button": "ブログ一覧",
+        "button_link": "shopify://blogs/blog"
       }
     },
     "top_info_zitET9": {
@@ -253,7 +249,7 @@
     "top_ranking_EKjAz6",
     "top_new_ijxNRF",
     "top_category_QNFJmk",
-    "featured_blog_bitBhi",
+    "featured_blog_XDTjAM",
     "top_info_zitET9",
     "top_instagram_8WgpGV",
     "top_register_VLtRAE"

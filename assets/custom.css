@@ -812,9 +812,26 @@ body {
 	color: #1D1D1D;
 }
 
+.blog-ttl {
+	color: #1D1D1D;
+	line-height: 1.5;
+	letter-spacing: 0;
+	font-size: 20px;
+}
+
 .blog-btnArea {
 	margin-top: 80px;
 	text-align: center;
+}
+
+.custom-readmore {
+	text-align: left;
+}
+
+.custom-readmore a {
+	color: #007acc;
+  text-decoration: underline;
+  display: inline-block;
 }
 
 /* infoセクション
