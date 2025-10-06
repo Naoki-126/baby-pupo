@@ -19,11 +19,19 @@
 {%- paginate blog.articles by 6 -%}
 
   <div class="main-blog page-width section-{{ section.id }}-padding">
-    <h1 class="title--primary{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+    {% comment %} <h1 class="title--primary{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
       {{ blog.title | escape }}
-    </h1>
+    </h1> {% endcomment %}
 
-    <div class="blog-articles {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}" style="gap: 70px;" >
+      <div class="blog-ttlArea" style="width: 100%;" >
+        <div class="c-ttlArea">
+          <h2 class="c-title">{{ blog.title | escape }}</h2>
+          <p class="c-subTitle">{{ section.settings.subTitle }}</p>
+        </div>
+      </div>
+
+
+    <div class="blog-articles {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}" style="margin-top: 100px; gap: 70px;" >
       {%- for article in blog.articles -%}
         <div
           class="blog-articles__article article{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
@@ -57,6 +65,12 @@
   "tag": "section",
   "class": "section",
   "settings": [
+    {
+      "type": "text",
+      "id":"subTitle",
+      "label": "サブタイトル",
+      "default": "ブログ"
+    },
     {
       "type": "select",
       "id": "layout",
@@ -138,6 +152,11 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
+    }
+  ],
+    "presets": [
+    {
+      "name": "main-blog"
     }
   ]
 }

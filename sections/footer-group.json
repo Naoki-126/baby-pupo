@@ -14,36 +14,92 @@
     "footer_custom_pPXBje": {
       "type": "footer-custom",
       "blocks": {
+        "item_e9FckJ": {
+          "type": "item",
+          "settings": {
+            "link_collectionTitle": "商品一覧",
+            "collection": "all"
+          }
+        },
+        "item_iRPGc4": {
+          "type": "item",
+          "settings": {
+            "link_collectionTitle": "商品カテゴリー",
+            "collection": "new"
+          }
+        },
+        "item_DmYcec": {
+          "type": "item",
+          "settings": {
+            "link_collectionTitle": "ブランド",
+            "collection": "new"
+          }
+        },
+        "page_contact_PYiLAw": {
+          "type": "page_contact",
+          "settings": {
+            "link_title": "お問い合わせ",
+            "link_url": "shopify://pages/contact"
+          }
+        },
+        "page_link_ygdgrd": {
+          "type": "page_link",
+          "settings": {
+            "link_title": "会社概要",
+            "link_url": "shopify://pages/contact"
+          }
+        },
+        "page_link_iAME8i": {
+          "type": "page_link",
+          "settings": {
+            "link_title": "お知らせ",
+            "link_url": "shopify://blogs/info"
+          }
+        },
+        "page_link_3pmqCN": {
+          "type": "page_link",
+          "settings": {
+            "link_title": "FAQ",
+            "link_url": "shopify://blogs/コラム"
+          }
+        },
         "sns_icon_TUX9Jq": {
           "type": "sns_icon",
           "settings": {
             "sns_type": "facebook",
-            "sns_link": ""
+            "sns_link": "https://Contacthttps://www.facebook.com/?locale=ja_JP"
           }
         },
         "sns_icon_bVDMbG": {
           "type": "sns_icon",
           "settings": {
             "sns_type": "x",
-            "sns_link": ""
+            "sns_link": "https://x.com/twitterjp?lang=ja"
           }
         },
         "sns_icon_RBqQeh": {
           "type": "sns_icon",
           "settings": {
             "sns_type": "instagram",
-            "sns_link": ""
+            "sns_link": "https://www.instagram.com/"
           }
         },
         "sns_icon_edV6At": {
           "type": "sns_icon",
           "settings": {
             "sns_type": "youtube",
-            "sns_link": ""
+            "sns_link": "https://www.youtube.com/"
           }
         }
       },
       "block_order": [
+        "item_e9FckJ",
+        "item_iRPGc4",
+        "item_DmYcec",
+        "page_contact_PYiLAw",
+        "page_link_ygdgrd",
+        "page_link_iAME8i",
+        "page_link_3pmqCN",
         "sns_icon_TUX9Jq",
         "sns_icon_bVDMbG",
         "sns_icon_RBqQeh",

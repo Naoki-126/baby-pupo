@@ -15,7 +15,7 @@
         "featured_image": {
           "type": "featured_image",
           "settings": {
-            "image_height": "adapt"
+            "image_height": "medium"
           }
         },
         "title": {
@@ -43,9 +43,21 @@
         "content"
       ],
       "settings": {}
+    },
+    "top_register_4cA3yA": {
+      "type": "top-register",
+      "name": "登録バナー",
+      "settings": {
+        "title": "CORPORATE CASTOMER",
+        "subTitle": "卸売用新規登録",
+        "text": "法人様向けの製品もお取り扱いしております\n新規ご登録お待ちしております。",
+        "button": "ご登録はこちらから",
+        "button_link": "shopify://pages/contact"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "top_register_4cA3yA"
   ]
 }

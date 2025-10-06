@@ -417,7 +417,7 @@ body {
 }
 
 .footer-low__snsArea {
-	margin-top: 30px;
+	margin: 30px auto 0;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -834,6 +834,20 @@ body {
   display: inline-block;
 }
 
+.blog-page__ttl {
+	color: #1D1D1D;
+	line-height: 1.5;
+	letter-spacing: 0;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.blog-page__txt {
+		line-height: 2.5;
+	letter-spacing: 0;
+	color: #1D1D1D;
+}
+
 /* infoセクション
 =========================== */
 .info {
@@ -889,6 +903,14 @@ body {
 .info-btnArea {
 	margin-top: 80px;
 	text-align: center;
+}
+
+.info-page {
+	width: 100%;
+	max-width: 1920px;
+	margin: 0 auto;
+	background: var(--bg--info);
+	padding: 36px 0 67px !important;
 }
 
 /* instaセクション

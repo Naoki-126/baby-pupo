@@ -8,62 +8,67 @@
           <div class="footer-name">株式会社リキッドマスターズ<br>〒111-1234<br>第3新東京市1234-5<br>TEL：0120-123-456<br>営業時間：平日10：00〜17：00<br>定休日：土日祝</div>
           <nav>
             <ul class="footer-menus">
-              <li><a href="" class="footer-menu">商品一覧</a></li>
-              <li><a href="" class="footer-menu">商品カテゴリー</a></li>
-              <li><a href="" class="footer-menu">ブランド</a></li>
-              <li><a href="" class="footer-menu">お問合せ</a></li>
+              {% for block in section.blocks %}
+                {% if block.type == 'item' %}
+                <li><a href="{{ block.settings.collection.url }}" class="footer-menu">{{ block.settings.link_collectionTitle }}</a></li>
+              {% endif %}
+              {% if block.type == 'page_contact' %}
+                <li><a href="{{ block.settings.link_url }}" class="footer-menu">{{ block.settings.link_title }}</a></li>
+              {% endif %}
+            {% endfor %}
             </ul>
           </nav>
           <nav>
             <ul class="footer-info">
-              <li><a href="" class="footer-page">会社概要</a></li>
-              <li><a href="" class="footer-page">お知らせ</a></li>
-              <li><a href="" class="footer-page">FAQ</a></li>
+              {% for block in section.blocks %}
+                {% if block.type == 'page_link' %}
+                  <li><a href="{{ block.settings.link_url }}" class="footer-page">{{ block.settings.link_title }}</a></li>
+                {% endif %}
+                {% comment %} <li><a href="" class="footer-page">会社概要</a></li>
+                <li><a href="" class="footer-page">お知らせ</a></li>
+                <li><a href="" class="footer-page">FAQ</a></li> {% endcomment %}
+              {% endfor %}
             </ul>
           </nav>
           <div class="footer-contact">
             <div class="footer-btnArea">
-              <a href="" class="c-btn__footer">お問い合わせ</a>
+              <a href="{{ pages['contact'].url }}" class="c-btn__footer">お問い合わせ</a>
             </div>
             <p class="footer-content__text">メルマガ登録で最新情報をお届け</p>
             <div class="footer-addressArea">
-              <a href="" class="c-btn__add">メールアドレス入力　→</a>
+              <a href="{{ pages['register-email'].url }}" class="c-btn__add">メールアドレス入力　→</a>
             </div>
           </div>
         </div>
       </div>
     </div>
     <div class="footer-low">
-      <nav>
+      <nav class="footer-low__nav">
         <ul class="footer-low__wrap">
-          <li><a href="" class="footer-low__content">プライバシーポリシー</a></li>
+          <li><a href="{{ pages['contact'].url }}" class="footer-low__content">プライバシーポリシー</a></li>
           <li><a href="" class="footer-low__content">特定商取引法に基づく表記</a></li>
           <li><a href="" class="footer-low__content">利用規約</a></li>
         </ul>
         <ul class="footer-low__snsArea">
           {% for block in section.blocks %}
             {% assign sns_type = block.settings.sns_type %}
-            <li>
-              <a href="{{ block.settings.sns_link }}" target="_blank" rel="noopener">
-                {% case sns_type %}
-                {% when 'facebook' %}
-                  {% render 'icon-facebook' %}
-                {% when 'x' %}
-                  {% render 'icon-x' %}
-                {% when 'instagram' %}
-                  {% render 'icon-instagram' %}
-                {% when 'youtube' %}
-                  {% render 'icon-youtube' %}
-                {% endcase %}
-              </a>
-            </li>
+            {% if block.settings.sns_link != blank %}
+              <li>
+                <a href="{{ block.settings.sns_link }}" target="_blank" rel="noopener">
+                  {% case sns_type %}
+                    {% when 'facebook' %}
+                      {% render 'icon-facebook' %}
+                    {% when 'x' %}
+                      {% render 'icon-x' %}
+                    {% when 'instagram' %}
+                      {% render 'icon-instagram' %}
+                    {% when 'youtube' %}
+                      {% render 'icon-youtube' %}
+                  {% endcase %}
+                </a>
+              </li>
+            {% endif %}
           {% endfor %}
-
-          {% comment %} <img src="{{ 'icon-facebook.svg' asset_url }}" alt="facebook" class="footer-sns" width="12"> {% endcomment %}
-
-          {% comment %} <li><a href=""><img src="./assets/twitter-bird.png" alt="twitter" class="footer-sns" width="25"></a></li>
-          <li><a href=""><img src="./assets/instagram.png" alt="instagram" class="footer-sns" width="21"></a></li>
-          <li><a href=""><img src="./assets/youtube-play.png" alt="youtube-play" class="footer-sns" width="25"></a></li> {% endcomment %}
         </ul>
       </nav>
       <p class="footer-copyright">@2023 BABYPUPO</p>
@@ -108,6 +113,38 @@
       ]
     },
     {
+      "type": "item",
+      "name": "商品アイテム",
+      "settings": [
+        {
+          "type": "text",
+          "id": "link_collectionTitle",
+          "label": "コレクションタイトル"
+        },
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "コレクション",
+        },
+      ]
+    },
+    {
+      "type": "page_contact",
+      "name": "コンタクト",
+      "settings": [
+        {
+          "type": "text",
+          "id": "link_title",
+          "label": "リンクタイトル"
+        },
+        {
+          "type": "url",
+          "id": "link_url",
+          "label": "リンク先URL"
+        }
+      ]
+    },
+    {
       "type": "page_link",
       "name": "ページリンク",
       "settings": [
@@ -123,22 +160,8 @@
         }
       ]
     },
-    {
-      "type": "item",
-      "name": "カテゴリー",
-      "settings": [
-        {
-          "type": "text",
-          "id": "link_collectionTitle",
-          "label": "コレクションタイトル"
-        },
-        {
-          "type": "collection",
-          "id": "collection",
-          "label": "コレクション",
-        },
-      ]
-    },
+
+
     {
       "type": "guide",
       "name": "ショッピングガイド",
@@ -151,22 +174,6 @@
         {
           "type": "url",
           "id": "guide_url",
-          "label": "リンク先URL"
-        }
-      ]
-    },
-    {
-      "type": "policy_link",
-      "name": "ポリシーリンク",
-      "settings": [
-        {
-          "type": "text",
-          "id": "link_title",
-          "label": "リンクタイトル"
-        },
-        {
-          "type": "url",
-          "id": "link_url",
           "label": "リンク先URL"
         }
       ]

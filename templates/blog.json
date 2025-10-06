@@ -9,9 +9,11 @@
  */
 {
   "sections": {
-    "main": {
+    "main_blog_LaEfiG": {
       "type": "main-blog",
+      "name": "main-blog",
       "settings": {
+        "subTitle": "ブログ",
         "layout": "grid",
         "show_image": true,
         "image_height": "medium",
@@ -20,9 +22,21 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "top_register_6T4xGg": {
+      "type": "top-register",
+      "name": "登録バナー",
+      "settings": {
+        "title": "CORPORATE CASTOMER",
+        "subTitle": "卸売用新規登録",
+        "text": "法人様向けの製品もお取り扱いしております\n新規ご登録お待ちしております。",
+        "button": "ご登録はこちらから",
+        "button_link": "shopify://pages/contact"
+      }
     }
   },
   "order": [
-    "main"
+    "main_blog_LaEfiG",
+    "top_register_6T4xGg"
   ]
 }

@@ -28,15 +28,17 @@
 <div class="blog color-{{ section.settings.color_scheme }} gradient{% if section.settings.heading == blank %} no-heading{% endif %} blog-top">
   <div class="page-width-desktop isolate{% if posts_displayed < 3 %} page-width-tablet{% endif %} section-{{ section.id }}-padding" style="padding:0;" >
     <div class="page-inner content-inner">
+
+      <div class="blog-ttlArea" style="width: 100%;" >
+        <div class="c-ttlArea">
+          <h2 class="c-title">{{ section.settings.title }}</h2>
+          <p class="c-subTitle">{{ section.settings.subTitle }}</p>
+        </div>
+      </div>
+
       {%- unless section.settings.heading == blank -%}
         <div class="title-wrapper-with-link{% if posts_displayed > 2 %} title-wrapper--self-padded-tablet-down{% else %} title-wrapper--self-padded-mobile{% endif %} title-wrapper--no-top-margin">
 
-          <div class="blog-ttlArea" style="width: 100%;" >
-            <div class="c-ttlArea">
-              <h2 class="c-title">{{ section.settings.title }}</h2>
-              <p class="c-subTitle">{{ section.settings.subTitle }}</p>
-            </div>
-          </div>
           {% comment %} <h2
               id="SectionHeading-{{ section.id }}"
               class="blog__title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
