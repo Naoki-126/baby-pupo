@@ -1,0 +1,64 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page-faq",
+      "blocks": {
+        "faq_group_aJPQd8": {
+          "type": "faq_group",
+          "settings": {
+            "sub-title": "うんこ",
+            "question1": "質問1です。",
+            "answer1": "質問1の回答です。",
+            "question2": "質問2",
+            "answer2": "質問2の回答です。",
+            "question3": "",
+            "answer3": "",
+            "question4": "",
+            "answer4": "",
+            "question5": "",
+            "answer5": "",
+            "question6": "",
+            "answer6": ""
+          }
+        },
+        "faq_group_yqj8FE": {
+          "type": "faq_group",
+          "settings": {
+            "sub-title": "くまさん",
+            "question1": "質問1",
+            "answer1": "回答1",
+            "question2": "質問2",
+            "answer2": "回答2",
+            "question3": "",
+            "answer3": "",
+            "question4": "",
+            "answer4": "",
+            "question5": "",
+            "answer5": "",
+            "question6": "",
+            "answer6": ""
+          }
+        }
+      },
+      "block_order": [
+        "faq_group_aJPQd8",
+        "faq_group_yqj8FE"
+      ],
+      "settings": {
+        "title": "よくあるご質問"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

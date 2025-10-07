@@ -46,7 +46,7 @@
           "type": "page_link",
           "settings": {
             "link_title": "会社概要",
-            "link_url": "shopify://pages/contact"
+            "link_url": "shopify://pages/company"
           }
         },
         "page_link_iAME8i": {
@@ -60,14 +60,14 @@
           "type": "page_link",
           "settings": {
             "link_title": "FAQ",
-            "link_url": "shopify://blogs/コラム"
+            "link_url": "shopify://pages/faq"
           }
         },
         "sns_icon_TUX9Jq": {
           "type": "sns_icon",
           "settings": {
             "sns_type": "facebook",
-            "sns_link": "https://Contacthttps://www.facebook.com/?locale=ja_JP"
+            "sns_link": "https://Contacthttps//www.facebook.com/?locale=ja_JP"
           }
         },
         "sns_icon_bVDMbG": {
