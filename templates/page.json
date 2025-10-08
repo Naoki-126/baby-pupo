@@ -15,9 +15,50 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "page_brand_VJ8b68": {
+      "type": "page-brand",
+      "blocks": {
+        "image_QWAWqD": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/liqui-master.avif",
+            "collection": "リキプロ"
+          }
+        },
+        "image_By3tJL": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/liki-pro.jpg",
+            "collection": "リキマスター"
+          }
+        }
+      },
+      "block_order": [
+        "image_QWAWqD",
+        "image_By3tJL"
+      ],
+      "name": "ブランドセクション",
+      "settings": {
+        "title": "Brand",
+        "subTitle": "ブランド"
+      }
+    },
+    "top_register_ztD3PC": {
+      "type": "top-register",
+      "name": "登録バナー",
+      "settings": {
+        "title": "CORPORATE CASTOMER",
+        "subTitle": "卸売用新規登録",
+        "text": "法人様向けの製品もお取り扱いしております\n新規ご登録お待ちしております。",
+        "button": "ご登録はこちらから",
+        "button_link": "shopify://pages/brand"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "page_brand_VJ8b68",
+    "top_register_ztD3PC"
   ]
 }

@@ -1,0 +1,68 @@
+<section class="category">
+  <div class="page-inner content-inner">
+    <div class="new-ttlArea">
+      <div class="c-ttlArea">
+        <h2 class="c-title">{{ section.settings.title }}</h2>
+        <p class="c-subTitle">{{ section.settings.subTitle }}</p>
+      </div>
+    </div>
+    <ul class="category-contents">
+      {% for block in section.blocks %}
+        {%  assign collection = block.settings.collection %}
+        <li class="category-content">
+          <a href="{{ collection.url }}"><img src="{{ block.settings.image | image_url: width: 620 }}" alt="{{ collection.title }}" class="content-img">
+            <span class="category-name">{{ collection.title }}</span>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "brand",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id":"title",
+      "label": "タイトル",
+      "default": "CATEGORY"
+    },
+    {
+      "type": "text",
+      "id":"subTitle",
+      "label": "サブタイトル",
+      "default": "商品カテゴリー"
+    },
+  ],
+  "blocks" : [
+    {
+      "type": "image",
+      "name":"イメージ画像",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "画像"
+        },
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "ブランド"
+        }
+      ],
+    },
+  ],
+  "presets": [
+    {
+      "name":"ブランドセクション",
+      "category": "ページ"
+    }
+  ]
+}
+{% endschema %}

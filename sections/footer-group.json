@@ -21,22 +21,22 @@
             "collection": "all"
           }
         },
-        "item_iRPGc4": {
-          "type": "item",
+        "page_index_EGYy7Y": {
+          "type": "page_index",
           "settings": {
-            "link_collectionTitle": "商品カテゴリー",
-            "collection": "new"
+            "link_title": "商品カテゴリー",
+            "link_url": "shopify://pages/categories"
           }
         },
-        "item_DmYcec": {
-          "type": "item",
+        "page_index_xYcMip": {
+          "type": "page_index",
           "settings": {
-            "link_collectionTitle": "ブランド",
-            "collection": "new"
+            "link_title": "ブランド",
+            "link_url": "shopify://pages/brand"
           }
         },
-        "page_contact_PYiLAw": {
-          "type": "page_contact",
+        "page_index_q998FP": {
+          "type": "page_index",
           "settings": {
             "link_title": "お問い合わせ",
             "link_url": "shopify://pages/contact"
@@ -94,9 +94,9 @@
       },
       "block_order": [
         "item_e9FckJ",
-        "item_iRPGc4",
-        "item_DmYcec",
-        "page_contact_PYiLAw",
+        "page_index_EGYy7Y",
+        "page_index_xYcMip",
+        "page_index_q998FP",
         "page_link_ygdgrd",
         "page_link_iAME8i",
         "page_link_3pmqCN",

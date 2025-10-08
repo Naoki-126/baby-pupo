@@ -1,0 +1,165 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "collage_jxBwtM": {
+      "type": "collage",
+      "blocks": {
+        "image_38hdNY": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/pet-and-owner-on-fall-walk.jpg"
+          }
+        },
+        "product_KBQGCM": {
+          "type": "product",
+          "settings": {
+            "product": "cat-05",
+            "second_image": false
+          }
+        },
+        "collection_d7VmJm": {
+          "type": "collection",
+          "settings": {
+            "collection": "autumn-campaign"
+          }
+        }
+      },
+      "block_order": [
+        "image_38hdNY",
+        "product_KBQGCM",
+        "collection_d7VmJm"
+      ],
+      "settings": {
+        "heading": "おしゃれ地帯",
+        "heading_size": "h1",
+        "desktop_layout": "left",
+        "mobile_layout": "column",
+        "card_styles": "product-card-wrapper",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_banner_pfYR36": {
+      "type": "image-banner",
+      "settings": {
+        "image": "shopify://shop_images/hiking-though-giants.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "rich_text_bMW7iA": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_HaVgwg": {
+          "type": "heading",
+          "settings": {
+            "heading": "テストページ用に編集中",
+            "heading_size": "h1"
+          }
+        },
+        "text_eArq66": {
+          "type": "text",
+          "settings": {
+            "text": "<p>テンプレート毎に内容がないよー！</p>"
+          }
+        },
+        "button_HGEpXK": {
+          "type": "button",
+          "settings": {
+            "button_label": "ボタンのラベル",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_HaVgwg",
+        "text_eArq66",
+        "button_HGEpXK"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "collapsible_content_MJrhXP": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_hmKTVc": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "折りたたみ可能な行",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_HbTUMy": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "折りたたみ可能な行",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_hmKTVc",
+        "collapsible_row_HbTUMy"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "よくある質問",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "collage_jxBwtM",
+    "image_banner_pfYR36",
+    "rich_text_bMW7iA",
+    "collapsible_content_MJrhXP"
+  ]
+}
