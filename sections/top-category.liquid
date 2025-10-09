@@ -1,4 +1,4 @@
-<section class="category">
+<section class="category" id="{{ section.settings.anchor_id | escape }}" >
   <div class="page-inner content-inner">
     <div class="new-ttlArea">
       <div class="c-ttlArea">
@@ -39,6 +39,11 @@
       "id":"subTitle",
       "label": "サブタイトル",
       "default": "商品カテゴリー"
+    },
+    {
+      "type": "text",
+      "id": "anchor_id",
+      "label": "アンカーID",
     },
   ],
   "blocks" : [

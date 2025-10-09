@@ -25,7 +25,7 @@
           "type": "page_index",
           "settings": {
             "link_title": "商品カテゴリー",
-            "link_url": "shopify://pages/categories"
+            "link_url": "/#category"
           }
         },
         "page_index_xYcMip": {

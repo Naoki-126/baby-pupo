@@ -87,7 +87,7 @@
         "image_DineH7": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/mv-3.png",
+            "image": "shopify://shop_images/category-img3.png",
             "collection": "beds"
           }
         },
@@ -148,7 +148,8 @@
       "name": "top-category",
       "settings": {
         "title": "CATEGORY",
-        "subTitle": "商品カテゴリー"
+        "subTitle": "商品カテゴリー",
+        "anchor_id": "category"
       }
     },
     "featured_blog_XDTjAM": {

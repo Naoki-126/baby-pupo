@@ -2,17 +2,19 @@
   <div class="page-inner content-inner">
     <div class="breadcrumbs-area">
       <nav  role="navigation" aria-label="breadcrumb">
-        <ol class="col-breadcrumb">
-          <li><a href="{{ routes.root_url }}">ホーム</a></li>
-          <li>{{ page.title }}</li>
+        <ol class="breadcrumb-wrap">
+          <li class="breadcrumb-page"><a href="{{ routes.root_url }}">ホーム</a></li>
+          <li class="breadcrumb-page">{{ page.title }}</li>
         </ol>
       </nav>
     </div>
     <section id="js-faq" class="faq">
       <div class="faq-contents">
-        <div class="guide-titleArea">
-          <h1 class="guideFv-title">{{ section.settings.title }}うんこ</h1>
-        </div>
+        <div class="new-ttlArea">
+      <div class="c-ttlArea">
+        <h2 class="c-title">{{ section.settings.title }}</h2>
+      </div>
+    </div>
 
         {% for block in section.blocks %}
           {% assign faq_block = block.settings %}
@@ -34,42 +36,11 @@
             </div>
           </div>
         {% endfor %}
+        
       </div>
     </section>
   </div>
 </main>
-
-<script>
-// document.addEventListener('DOMContentLoaded', () => {
-//   document.querySelectorAll('#js-faq .accordion-a').forEach(content => {
-//     content.style.maxHeight = '0px';
-//     content.style.paddingTop = '0';
-//     content.style.paddingBottom = '0';
-//   });
-
-//   document.querySelectorAll('#js-faq .accordion-q').forEach(trigger => {
-//     const content = trigger.nextElementSibling;
-
-//     trigger.addEventListener('click', function () {
-//       const isActive = trigger.classList.contains('active');
-
-//       if (isActive) {
-//         trigger.classList.remove('active');
-//         content.style.maxHeight = '0px';
-//         content.style.paddingTop = '0';
-//         content.style.paddingBottom = '0';
-//       } else {
-//         trigger.classList.add('active');
-//         content.style.paddingTop = '14px';
-//         content.style.paddingBottom = '14px';
-//         content.style.maxHeight = (content.scrollHeight + 30) + 'px';
-//       }
-//     });
-//   });
-// });
-
-
-</script>
 
 {% schema %}
 {

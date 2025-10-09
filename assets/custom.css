@@ -246,21 +246,33 @@ body {
 }
 
 .breadcrumbs-area {
-	margin-top: 60px;
-	display: flex;
-	align-items: center;
+	margin-top: 10px;
+	width: 100%;
 }
 
-.breadcrumbs-area20 {
-	margin-top: 20px;
+.breadcrumb-wrap {
 	display: flex;
+	flex-wrap: nowrap;
 	align-items: center;
+	gap: 1px;
 }
 
-.breadcrumb-text {
-	font-size: 12px;
-	line-height: 1.5;
+.breadcrumb-page {
+  font-size: 14px;
 }
+
+.breadcrumb-page + .breadcrumb-page::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: url("../assets/arrow-down.png") no-repeat center;
+  background-size: contain;
+  transform: rotate(-90deg);
+  margin: 0 10px;
+  vertical-align: middle;
+}
+
 
 /* 商品
 =========================== */
