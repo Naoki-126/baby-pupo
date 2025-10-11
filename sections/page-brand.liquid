@@ -1,17 +1,14 @@
-<section class="category">
+<section class="brand-page">
   <div class="page-inner content-inner">
-    <div class="new-ttlArea">
-      <div class="c-ttlArea">
-        <h2 class="c-title">{{ section.settings.title }}</h2>
-        <p class="c-subTitle">{{ section.settings.subTitle }}</p>
-      </div>
-    </div>
-    <ul class="category-contents">
+    <h1 class="main-page-title page-title h0{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}" style="text-align: center;">
+      {{ page.title | escape }}
+    </h1>
+    <ul class="page-brand__contents">
       {% for block in section.blocks %}
         {%  assign collection = block.settings.collection %}
-        <li class="category-content">
-          <a href="{{ collection.url }}"><img src="{{ block.settings.image | image_url: width: 620 }}" alt="{{ collection.title }}" class="content-img">
-            <span class="category-name">{{ collection.title }}</span>
+        <li class="page-band__content">
+          <a href="{{ collection.url }}"><img src="{{ block.settings.image | image_url: width: 620 }}" alt="{{ collection.title }}" class="page-brand__img">
+            <h3 class="page-brand__name">{{ collection.title }}</h3>
           </a>
         </li>
       {% endfor %}
