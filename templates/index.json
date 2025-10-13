@@ -9,12 +9,102 @@
  */
 {
   "sections": {
-    "custom_fv_KdaKni": {
-      "type": "top-fv",
-      "name": "トップFV画像",
+    "slideshow_custom_pEhUcJ": {
+      "type": "slideshow-custom",
+      "blocks": {
+        "slide_A64F7h": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/mv-1.png",
+            "image_overlay_opacity": 0,
+            "heading": "画像スライド",
+            "heading_size": "h1",
+            "subheading": "ブランドのストーリーを画像で伝える",
+            "button_label": "ボタンのラベル",
+            "link": "",
+            "button_style_secondary": false,
+            "show_text_box": true,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": ""
+          }
+        },
+        "slide_UiJdAh": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/mv-2.png",
+            "image_overlay_opacity": 0,
+            "heading": "画像スライド",
+            "heading_size": "h1",
+            "subheading": "ブランドのストーリーを画像で伝える",
+            "button_label": "ボタンのラベル",
+            "link": "",
+            "button_style_secondary": false,
+            "show_text_box": true,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": ""
+          }
+        },
+        "slide_X7HWef": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/mv-3.png",
+            "image_overlay_opacity": 0,
+            "heading": "画像スライド",
+            "heading_size": "h1",
+            "subheading": "ブランドのストーリーを画像で伝える",
+            "button_label": "ボタンのラベル",
+            "link": "",
+            "button_style_secondary": false,
+            "show_text_box": true,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": "scheme-1"
+          }
+        }
+      },
+      "block_order": [
+        "slide_A64F7h",
+        "slide_UiJdAh",
+        "slide_X7HWef"
+      ],
+      "name": "カスタムスライド",
       "settings": {
-        "image": "shopify://shop_images/mv-1.png"
+        "layout": "full_bleed",
+        "slide_height": "medium",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "show_text_below": true,
+        "accessibility_info": "ブランドについてのスライドショー"
       }
+    },
+    "top_fv_xyPc3y": {
+      "type": "top-fv",
+      "blocks": {
+        "slide_fxmCGF": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/mv-1.png",
+            "alt": "mv1",
+            "logo": "shopify://shop_images/logo_nemurin.png",
+            "logo_alt": "logo1",
+            "text": "<p>tekisutoに説明文を入力してください。</p>",
+            "button_label": "商品をみにいく",
+            "button_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_fxmCGF"
+      ],
+      "name": "FVスライドショー",
+      "settings": {}
     },
     "top_movie_qc74hp": {
       "type": "top-movie",
@@ -243,7 +333,8 @@
     }
   },
   "order": [
-    "custom_fv_KdaKni",
+    "slideshow_custom_pEhUcJ",
+    "top_fv_xyPc3y",
     "top_movie_qc74hp",
     "top_about_YjqzyA",
     "top_brand_PcLkH4",

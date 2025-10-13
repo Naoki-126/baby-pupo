@@ -13,12 +13,11 @@
       "type": "main-collection-banner",
       "settings": {
         "show_collection_description": true,
-        "show_collection_image": false,
+        "show_collection_image": true,
         "color_scheme": "scheme-1"
       }
     },
     "product-grid": {
-      // "type": "main-collection-product-grid",
       "type": "custom-collection-product-grid",
       "settings": {
         "products_per_page": 16,

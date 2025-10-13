@@ -1,13 +1,39 @@
 // alert("テスト");
 
 /* ==========================================================================
-    カスタムJS：ページごとのスクリプト制御
-    - FAQページのアコーディオン
-    - ページ内アンカースクロール補正
-  ==========================================================================
-*/
+  カスタムJS：ページごとのスクリプト制御
+  - FAQページのアコーディオン
+  - ページ内アンカースクロール補正
+  - トップページのSwiperスライダー
+========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
+  // --------------------------------------------------------
+  // Swiper（トップページなど）
+  // --------------------------------------------------------
+  const initSwiper = () => {
+    const swiperEl = document.querySelector('.swiper');
+    if (!swiperEl) return; // ← swiperが存在しないページではスキップ
+
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      effect: 'fade',
+      speed: 1000,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  };
+
   // --------------------------------------------------------
   // FAQアコーディオン
   // --------------------------------------------------------
@@ -80,30 +106,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // --------------------------------------------------------
   // 初期化呼び出し（ページ存在チェック付き）
   // --------------------------------------------------------
+  initSwiper();
   initFAQ();
   initAnchorScroll();
 });
-
-
-/* スワイパー
-=========================== */
-// const swiper = new Swiper(".swiper", {
-//     loop: true,
-//     effect: "fade",
-//     speed: 1000,
-//     autoplay: {
-//       delay: 4000,
-//       disableOnInteraction: false,
-//     },
-//     pagination: {
-//       el: ".swiper-pagination",
-//       clickable: true,
-//     },
-//     navigation: {
-//       nextEl: ".swiper-button-next",
-//       prevEl: ".swiper-button-prev",
-//     },
-//   });
 
 
 
