@@ -20,31 +20,31 @@
     "page_brand_VJ8b68": {
       "type": "page-brand",
       "blocks": {
-        "image_QWAWqD": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/liqui-master.avif",
-            "collection": "リキプロ"
-          }
-        },
         "image_By3tJL": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/liki-pro.jpg",
-            "collection": "リキマスター"
+            "image": "shopify://shop_images/logo_kumataro.png",
+            "collection": "kumataro"
+          }
+        },
+        "image_QWAWqD": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/logo_usa.png",
+            "collection": "リキプロ"
           }
         },
         "image_aHyUFk": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/taco-cora.jpg",
-            "collection": "taco"
+            "image": "shopify://shop_images/logo_nemurin.png",
+            "collection": "nemurin"
           }
         }
       },
       "block_order": [
-        "image_QWAWqD",
         "image_By3tJL",
+        "image_QWAWqD",
         "image_aHyUFk"
       ],
       "name": "ブランドセクション",

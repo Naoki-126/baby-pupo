@@ -1,19 +1,19 @@
 <section class="fv">
   <div class="page-inner">
     <div class="swiper fv-swiper">
-      <div class="swiper-wrapper">表示確認
+      <div class="swiper-wrapper">
 
         {% for block in section.blocks %}
           <div class="swiper-slide">
             <div class="fv-area">
+
               {% if block.settings.image !=blank %}
                 <img src="{{ block.settings.image | image_url: width: 1920 }}" alt="{{ block.settings.alt | escape }}" class="fv-img">
               {% endif %}
 
               <div class="fv-txtArea">
-
                 {% if block.settings.logo != blank %}
-                  <h2 class="fv-logoArea"><img src="{{ block.settings.logo |  image_url: 274 }}" alt="{{ block.settings.logo_alt | escape }}" class="fv-logo"></h2>
+                  <h2 class="fv-logoArea"><img src="{{ block.settings.logo |  image_url: width: 274 }}" alt="{{ block.settings.logo_alt | escape }}" class="fv-logo"  style="max-width: {{ block.settings.logo_max_width }}px;" ></h2>
                 {% endif %}
 
                 {% if block.settings.text != blank %}
@@ -25,8 +25,8 @@
                     <a href="{{ block.settings.button_url }}" class="c-btn">{{ block.settings.button_label }}</a>
                   </div>
                 {% endif %}
-
               </div>
+
             </div>
           </div>
         {% endfor %}
@@ -69,6 +69,12 @@
           "type": "text",
           "id": "logo_alt",
           "label": "ロゴ画像の代替テキスト"
+        },
+        {
+          "type": "number",
+          "id": "logo_max_width",
+          "label": "ロゴ最大幅(px)",
+          "default": 274
         },
         {
           "type": "richtext",

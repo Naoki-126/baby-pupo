@@ -9,81 +9,6 @@
  */
 {
   "sections": {
-    "slideshow_custom_pEhUcJ": {
-      "type": "slideshow-custom",
-      "blocks": {
-        "slide_A64F7h": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/mv-1.png",
-            "image_overlay_opacity": 0,
-            "heading": "画像スライド",
-            "heading_size": "h1",
-            "subheading": "ブランドのストーリーを画像で伝える",
-            "button_label": "ボタンのラベル",
-            "link": "",
-            "button_style_secondary": false,
-            "show_text_box": true,
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "text_alignment_mobile": "center",
-            "color_scheme": ""
-          }
-        },
-        "slide_UiJdAh": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/mv-2.png",
-            "image_overlay_opacity": 0,
-            "heading": "画像スライド",
-            "heading_size": "h1",
-            "subheading": "ブランドのストーリーを画像で伝える",
-            "button_label": "ボタンのラベル",
-            "link": "",
-            "button_style_secondary": false,
-            "show_text_box": true,
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "text_alignment_mobile": "center",
-            "color_scheme": ""
-          }
-        },
-        "slide_X7HWef": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/mv-3.png",
-            "image_overlay_opacity": 0,
-            "heading": "画像スライド",
-            "heading_size": "h1",
-            "subheading": "ブランドのストーリーを画像で伝える",
-            "button_label": "ボタンのラベル",
-            "link": "",
-            "button_style_secondary": false,
-            "show_text_box": true,
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "text_alignment_mobile": "center",
-            "color_scheme": "scheme-1"
-          }
-        }
-      },
-      "block_order": [
-        "slide_A64F7h",
-        "slide_UiJdAh",
-        "slide_X7HWef"
-      ],
-      "name": "カスタムスライド",
-      "settings": {
-        "layout": "full_bleed",
-        "slide_height": "medium",
-        "slider_visual": "counter",
-        "auto_rotate": false,
-        "change_slides_speed": 5,
-        "image_behavior": "none",
-        "show_text_below": true,
-        "accessibility_info": "ブランドについてのスライドショー"
-      }
-    },
     "top_fv_xyPc3y": {
       "type": "top-fv",
       "blocks": {
@@ -92,16 +17,45 @@
           "settings": {
             "image": "shopify://shop_images/mv-1.png",
             "alt": "mv1",
-            "logo": "shopify://shop_images/logo_nemurin.png",
-            "logo_alt": "logo1",
-            "text": "<p>tekisutoに説明文を入力してください。</p>",
+            "logo": "shopify://shop_images/logo_kumataro.png",
+            "logo_alt": "kumataro",
+            "logo_max_width": 274,
+            "text": "<p>Kumataroも架空ブランドです。<br/>話しかけるとお喋りする奇妙な<br/>ぬいぐるみです。</p>",
             "button_label": "商品をみにいく",
-            "button_url": ""
+            "button_url": "shopify://collections/kumataro"
+          }
+        },
+        "slide_wPBecg": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/mv-2.png",
+            "alt": "mv2",
+            "logo": "shopify://shop_images/logo_usa.png",
+            "logo_alt": "usagimaru",
+            "logo_max_width": 187,
+            "text": "<p>ここUSAGIMARUはうさぎモチーフの<br/>架空おもちゃブランドです。に説明文を入力してください。</p>",
+            "button_label": "商品をみにいく",
+            "button_url": "shopify://collections/リキプロ"
+          }
+        },
+        "slide_bYHwWb": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/mv-3.png",
+            "alt": "mv3",
+            "logo": "shopify://shop_images/logo_nemurin.png",
+            "logo_alt": "nemurin",
+            "logo_max_width": 123,
+            "text": "<p>ここに説明文NEMURINも<br/>架空のベビー寝具ブランドです。<br/>本当にあったらいいな。を入力してください。</p>",
+            "button_label": "商品をみにいく",
+            "button_url": "shopify://collections/nemurin"
           }
         }
       },
       "block_order": [
-        "slide_fxmCGF"
+        "slide_fxmCGF",
+        "slide_wPBecg",
+        "slide_bYHwWb"
       ],
       "name": "FVスライドショー",
       "settings": {}
@@ -333,7 +287,6 @@
     }
   },
   "order": [
-    "slideshow_custom_pEhUcJ",
     "top_fv_xyPc3y",
     "top_movie_qc74hp",
     "top_about_YjqzyA",
