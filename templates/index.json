@@ -33,7 +33,7 @@
             "logo": "shopify://shop_images/logo_usa.png",
             "logo_alt": "usagimaru",
             "logo_max_width": 187,
-            "text": "<p>ここUSAGIMARUはうさぎモチーフの<br/>架空おもちゃブランドです。に説明文を入力してください。</p>",
+            "text": "<p>ここUSAGIMARUはうさぎモチーフの<br/>架空おもちゃブランドです。</p>",
             "button_label": "商品をみにいく",
             "button_url": "shopify://collections/リキプロ"
           }
@@ -46,7 +46,7 @@
             "logo": "shopify://shop_images/logo_nemurin.png",
             "logo_alt": "nemurin",
             "logo_max_width": 123,
-            "text": "<p>ここに説明文NEMURINも<br/>架空のベビー寝具ブランドです。<br/>本当にあったらいいな。を入力してください。</p>",
+            "text": "<p>NEMURIN<br/>架空のベビー寝具ブランドです。<br/>本当にあったらいいな。</p>",
             "button_label": "商品をみにいく",
             "button_url": "shopify://collections/nemurin"
           }
