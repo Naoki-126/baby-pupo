@@ -315,14 +315,15 @@
       </div>
     </header>
 
+    {% comment %} <a href=""><img src="./assets/cart-icon.png" alt="cart-icon" class="header-cart"></a> {% endcomment %}
     <div class="c-header-cartArea">
-      {% comment %} <a href=""><img src="./assets/cart-icon.png" alt="cart-icon" class="header-cart"></a> {% endcomment %}
       <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
-        {% if cart == empty %}
+        {% comment %} {% if cart == empty %}
           <span class="svg-wrapper">{{ 'icon-cart-empty.svg' | inline_asset_content }}</span>
         {% else %}
           <span class="svg-wrapper">{{ 'icon-cart.svg' | inline_asset_content }}</span>
-        {% endif %}
+        {% endif %} {% endcomment %}
+        <img src="{{ 'cart-bear.png' | asset_url }}" alt="カート" class="header-cart__img" width="98" height="107" >
         <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
         {%- if cart != empty -%}
           <div class="cart-count-bubble">
