@@ -312,12 +312,12 @@ body {
 	width: 100%;
 	max-width: 1920px;
 	margin: 0 auto;
-	padding: 6px 0 !important;
+	padding: 0 !important;
 	display: block !important;
 }
 
 .c-header-upper {
-	padding: 15px 34px;
+	padding: 6px 34px 10px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -333,9 +333,13 @@ body {
 	gap: 36px;
 }
 
+.c-header-upper__menu {
+	font-size: 14px;
+}
+
 .c-header-lower {
 	border-top: .5px solid var(--color-primary);
-	padding: 10px 34px 2px;
+	padding: 6px 34px 0px;
 	display: flex;
 	width: 100%;
 	justify-content: space-between;
@@ -378,12 +382,18 @@ body {
 	width: 24px;
 }
 
-.c-header-lower__smile {
-	width: 25px;
+.header-lower__icon {
+	position: relative;
 }
 
-.c-header-lower__heart {
-	width: 25px;
+.c-header__iconName {
+	content: "";
+	position: absolute;
+	font-size: 6px;
+	width: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: -5px;
 }
 
 .c-drawer-icon {
