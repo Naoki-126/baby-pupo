@@ -15,13 +15,14 @@
       aria-haspopup="dialog"
       aria-label="{{ 'general.search.search' | t }}"
     >
-      <span>
+      <span class="header-lower__icon">
         <span class="svg-wrapper">
           {{- 'icon-search.svg' | inline_asset_content -}}
-        </span>
-        <span class="svg-wrapper header__icon-close">
-          {{- 'icon-close.svg' | inline_asset_content -}}
-        </span>
+          </span>
+          <span class="svg-wrapper header__icon-close">
+            {{- 'icon-close.svg' | inline_asset_content -}}
+          </span>
+        <p class="c-header__iconName" style="bottom: 0%; left: 80%; transform: translateX(0)%;">検索</p>
       </span>
     </summary>
     <div
