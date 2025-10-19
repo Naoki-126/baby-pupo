@@ -9,11 +9,28 @@
  */
 {
   "sections": {
+    "image_banner_q9AtxN": {
+      "type": "image-banner",
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "{{ collection.image }}",
+        "image_overlay_opacity": 20,
+        "image_height": "small",
+        "image_behavior": "zoom-in",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
     "banner": {
       "type": "main-collection-banner",
       "settings": {
         "show_collection_description": true,
-        "show_collection_image": true,
+        "show_collection_image": false,
         "color_scheme": "scheme-1"
       }
     },
@@ -45,11 +62,12 @@
         "subTitle": "卸売用新規登録",
         "text": "法人様向けの製品もお取り扱いしております\n新規ご登録お待ちしております。",
         "button": "ご登録はこちらから",
-        "button_link": "shopify://pages/contact"
+        "button_link": "/account/register"
       }
     }
   },
   "order": [
+    "image_banner_q9AtxN",
     "banner",
     "product-grid",
     "top_register_xVfMMw"

@@ -8,16 +8,16 @@
             <div class="fv-area">
 
               {% if block.settings.image !=blank %}
-                <img src="{{ block.settings.image | image_url: width: 1920 }}" alt="{{ block.settings.alt | escape }}" class="fv-img">
+                <img src="{{ block.settings.image | image_url: width: 1920 }}" alt="{{ block.settings.alt | escape }}" class="fv-img" data-pc-x="{{ block.settings.img-position__pc-x }}" data-pc-y="{{ block.settings.img-position__pc-y }}" data-sp-x="{{ block.settings.img-position__sp-x }}" data-sp-y="{{ block.settings.img-position__sp-y }}" >
               {% endif %}
 
               <div class="fv-txtArea">
                 {% if block.settings.logo != blank %}
-                  <h2 class="fv-logoArea"><img src="{{ block.settings.logo |  image_url: width: 274 }}" alt="{{ block.settings.logo_alt | escape }}" class="fv-logo"  style="max-width: {{ block.settings.logo_max_width }}px;" ></h2>
+                  <h2 class="fv-logoArea"><img src="{{ block.settings.logo |  image_url: width: 274 }}" alt="{{ block.settings.logo_alt | escape }}" class="fv-logo"  style="--logo-pc: {{ block.settings.logo_max_width }}px; --logo-sp: {{ block.settings.logo_max_width_sp }}px;" ></h2>
                 {% endif %}
 
                 {% if block.settings.text != blank %}
-                  <p class="fv-text">{{ block.settings.text }}</p>
+                  <div class="fv-text">{{ block.settings.text }}</div>
                 {% endif %}
 
                 {% if block.settings.button_label != blank and block.settings.button_url != blank %}
@@ -61,6 +61,50 @@
           "label" : "メイン画像の代替テキスト",
         },
         {
+          "type": "header",
+          "content": "画像位置（PC）"
+        },
+        {
+          "type": "range",
+          "id": "img-position__pc-x",
+          "label": "横位置（X軸 %）",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "default": 50
+        },
+        {
+          "type": "range",
+          "id": "img-position__pc-y",
+          "label": "縦位置（Y軸 %）",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "default": 50
+        },
+        {
+          "type": "header",
+          "content": "画像位置（SP）"
+        },
+        {
+          "type": "range",
+          "id": "img-position__sp-x",
+          "label": "横位置（X軸 %）",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "default": 50
+        },
+        {
+          "type": "range",
+          "id": "img-position__sp-y",
+          "label": "縦位置（Y軸 %）",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "default": 50
+        },
+        {
           "type": "image_picker",
           "id": "logo",
           "label": "ロゴ画像"
@@ -75,6 +119,12 @@
           "id": "logo_max_width",
           "label": "ロゴ最大幅(px)",
           "default": 274
+        },
+        {
+          "type": "number",
+          "id": "logo_max_width_sp",
+          "label": "スマホ時のロゴ最大幅(px)",
+          "default": 180
         },
         {
           "type": "richtext",

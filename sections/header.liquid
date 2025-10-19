@@ -166,6 +166,7 @@
                 日本語
                 <span class="lang-arrow">▼</span>
               </button>
+              {% comment %} デザインのみ {% endcomment %}
               <ul class="lang-dropdown">
                 <li><a href="/ja" class="lang-option">日本語</a></li>
                 <li><a href="/en" class="lang-option">English</a></li>
@@ -378,14 +379,10 @@
         {% endif %} {% endcomment %}
         <img src="{{ 'cart-bear.png' | asset_url }}" alt="カート" class="header-cart__img" width="98" height="107" >
         <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
-        {%- if cart != empty -%}
-          <div class="cart-count-bubble">
-            {%- if cart.item_count < 100 -%}
-              <span aria-hidden="true">{{ cart.item_count }}</span>
-            {%- endif -%}
-            <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
-          </div>
-        {%- endif -%}
+
+        <div class="cart-count-bubble" id="cart-count-bubble">
+          <span aria-hidden="true" id="cart-count-number">0</span>
+        </div>
       </a>
     </div>
 
@@ -555,6 +552,7 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
+    /* ===== 言語切り替えメニュー ===== */
     const langMenu = document.querySelector('.c-header-upper__menu--lang');
     const toggle = langMenu?.querySelector('.lang-toggle');
 
@@ -569,7 +567,35 @@
         langMenu.classList.remove('open');
       });
     }
+
+    /* ===== カートバブル更新処理 ===== */
+    const bubble = document.getElementById('cart-count-bubble');
+    const countNumber = document.getElementById('cart-count-number');
+
+    if (bubble && countNumber) {
+      // ページ読み込み時にカート数を取得
+      updateCartBubble();
+
+      // 共通関数として定義
+      function updateCartBubble() {
+        fetch('/cart.js')
+          .then(res => res.json())
+          .then(cart => {
+            if (cart.item_count > 0) {
+              bubble.style.display = 'block';
+              countNumber.textContent = cart.item_count;
+            } else {
+              bubble.style.display = 'none';
+            }
+          })
+          .catch(err => console.error('Cart fetch error:', err));
+      }
+
+      // （任意）Ajaxカートを使用している場合に備えて、グローバルで呼び出せるように
+      window.updateCartBubble = updateCartBubble;
+    }
   });
+
 </script>
 
 {% schema %}

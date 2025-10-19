@@ -162,6 +162,50 @@ body {
 	line-height: 1;
 }
 
+.c-btn__label {
+	background: #AB8572;
+	font-family: 'Lato';
+	font-size: 12px;
+	line-height: 1;
+	letter-spacing: 0;
+	color: #ffffcc;;
+	padding: 6px 9px;
+	border-radius: 20px;
+}
+
+.c-btn__labelSo {
+	background: #292929;
+	font-family: 'Lato';
+	font-size: 12px;
+	line-height: 1;
+	letter-spacing: 0;
+	color: #ffffcc;;
+	padding: 6px 8px;
+	border-radius: 20px;
+}
+
+.c-btn__labelNew {
+	background: #FF9090;
+	font-family: 'Lato';
+	font-size: 12px;
+	line-height: 1;
+	letter-spacing: 0;
+	color: #ffffcc;
+	padding: 6px 8px;
+	border-radius: 20px;
+}
+
+.c-btn__labelRec {
+	background: #FEAC61;
+	font-family: 'Lato';
+	font-size: 12px;
+	line-height: 1;
+	letter-spacing: 0;
+	color: #ffffcc;
+	padding: 6px 8px;
+	border-radius: 20px;
+}
+
 .c-ttlArea {
 	display: inline-block;
 }
@@ -217,23 +261,28 @@ body {
 	background: #FF9090;
 }
 
+.article-card__image-wrapper {
+	position: relative;
+}
+
+.option-addTag {
+  position: absolute;
+  top: -6px;
+  right: 0 ;
+  z-index: 2;
+}
+
 .label-type {
-	content: "";
-	position: absolute;
 	font-family: var(--ff-label);
-	background: #44BFCF;
+	background:#44BFCF;
 	color: #fff;
 	font-size: 12px;
 	line-height: 1;
 	letter-spacing: 0;
-	padding: 1px 5px;
-	top: 0;
-	right: 0;
+	padding: 3px 6px;
 }
 
 .label-typeC {
-	content: "";
-	position: absolute;
 	font-family: var(--ff-label);
 	background: #93CC4B;
 	color: #fff;
@@ -241,8 +290,25 @@ body {
 	line-height: 1;
 	letter-spacing: 0;
 	padding: 1px 5px;
-	top: 0;
-	right: 0;
+}
+
+.option-add__labels {
+	position: relative;
+}
+
+.option-add__label {
+	position: absolute;
+	top: 10px;
+	left: 8px;
+	display: inline-block;
+	z-index: 2;
+}
+
+.option-add__label:nth-child(2) {
+  top: 38px;
+}
+.option-add__label:nth-child(3) {
+  top: 66px;
 }
 
 .breadcrumbs-area {
@@ -492,15 +558,28 @@ body {
 
 .cart-count-bubble {
   position: absolute;
-  top: 10%;
-  right: 10%;
-  background-color: #ff3333;
+  top: -8px;
+  right: -8px;
+  min-width: 28px;
+  height: 28px;
+  padding: 0 6px;
+  border-radius: 50%;
+  background-color: #ff3b30; /* 赤く目立つ */
   color: #fff;
-  font-size: 0.75rem;
-  font-weight: bold;
-  border-radius: 9999px;
-  padding: 0.25em 0.4em;
-  line-height: 1;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: center;
+  display: none; /* JSで制御 */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  z-index: 5;
+}
+
+.cart-count-bubble.show {
+  display: block;
+  transform: scale(1.1);
+  opacity: 1;
 }
 
 /* Footer

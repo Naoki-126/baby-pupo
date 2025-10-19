@@ -13,9 +13,15 @@
 	overflow: hidden;
 }
 
+.fv .swiper-slide,
+.fv-area {
+  height: 100vh;
+}
+
 .fv-img {
 	width: 100%;
 	max-width: 1920px;
+	/* max-width: none; */
 	height: auto;
 	height: 100%;
 	object-fit: cover;
@@ -27,6 +33,7 @@
 	position: absolute;
 	top: 25%;
 	left: 20%;
+	top: 40%;
 }
 
 .fv-logoArea {
@@ -38,19 +45,7 @@
 
 .fv-logo {
 	width: 100%;
-	max-width: 274px;
-	height: auto;
-}
-
-.fv-logo2 {
-	width: 100%;
-	max-width: 187px;
-	height: auto;
-}
-
-.fv-logo3 {
-	width: 100%;
-	max-width: 123px;
+	max-width: var(--logo-pc);
 	height: auto;
 }
 
@@ -537,7 +532,6 @@
 	text-align: center;
 }
 
-
 /* ===========================
 #  レスポンシブ対応
 =========================== */
@@ -545,14 +539,23 @@
 
   /* fvセクション
   =========================== */
+	.fv .swiper-slide,
+  .fv-area {
+    height: 80vh;
+  }
+
   .fv-img {
-    aspect-ratio: 4 / 5;
+		aspect-ratio: 4 / 5;
     min-height: 60vh;
   }
 
+	.fv-logo {
+		max-width: var(--logo-sp);
+	}
+
   .fv-txtArea {
-    top: 42%;
-    left: 20%;
+    top: 45%;
+    left: 15%;
   }
 
   .fv-logo {
@@ -560,7 +563,8 @@
   }
 
   .fv-text {
-    margin-top: 20px;
+    margin-top: 10px;
+		text-shadow: 0 0 4px #fff, 0 0 8px #fff;
   }
 
   /*  movieセクション
@@ -692,5 +696,14 @@
     gap: 30px;
   }
 
+	/* instaセクション
+	=========================== */
+	.insta-contents {
+		max-width: 100%;
+	margin-top: 48px;
+	grid-template-columns: repeat(auto-fit, minmax(160px, auto));
+	justify-content: center;
+		gap: 8px;
+	}
 
 }

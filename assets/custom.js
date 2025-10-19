@@ -34,6 +34,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
+   // 画像位置の反映
+  const setImagePosition = () => {
+    const images = document.querySelectorAll('.fv-img');
+    const isSp = window.matchMedia('(max-width: 768px)').matches;
+
+    images.forEach(img => {
+      const x = isSp ? img.dataset.spX : img.dataset.pcX;
+      const y = isSp ? img.dataset.spY : img.dataset.pcY;
+      if (x && y) {
+        img.style.objectPosition = `${x}% ${y}%`;
+      }
+    });
+  };
+
+  initSwiper();
+  setImagePosition();
+  window.addEventListener('resize', setImagePosition);
+
+
   // --------------------------------------------------------
   // FAQアコーディオン
   // --------------------------------------------------------
@@ -113,13 +132,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-/* ドロワー
-=========================== */
-// const drawerBtn = document.getElementById("js-drawer");
-// const drawerContents = document.getElementById("js-drawer__contents")
-
-// drawerBtn.addEventListener("click",function (e) {
-//   e.preventDefault();
-//   drawerBtn.classList.toggle("is-checked");
-//   drawerContents.classList.toggle("is-checked");
-// });

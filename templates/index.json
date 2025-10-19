@@ -17,9 +17,14 @@
           "settings": {
             "image": "shopify://shop_images/mv-1.png",
             "alt": "mv1",
+            "img-position__pc-x": 50,
+            "img-position__pc-y": 50,
+            "img-position__sp-x": 40,
+            "img-position__sp-y": 50,
             "logo": "shopify://shop_images/logo_kumataro.png",
             "logo_alt": "kumataro",
             "logo_max_width": 274,
+            "logo_max_width_sp": 180,
             "text": "<p>Kumataroも架空ブランドです。<br/>話しかけるとお喋りする奇妙な<br/>ぬいぐるみです。</p>",
             "button_label": "商品をみにいく",
             "button_url": "shopify://collections/kumataro"
@@ -30,10 +35,15 @@
           "settings": {
             "image": "shopify://shop_images/mv-2.png",
             "alt": "mv2",
+            "img-position__pc-x": 50,
+            "img-position__pc-y": 50,
+            "img-position__sp-x": 80,
+            "img-position__sp-y": 50,
             "logo": "shopify://shop_images/logo_usa.png",
             "logo_alt": "usagimaru",
             "logo_max_width": 187,
-            "text": "<p>ここUSAGIMARUはうさぎモチーフの<br/>架空おもちゃブランドです。</p>",
+            "logo_max_width_sp": 120,
+            "text": "<p>USAGIMARUはうさぎモチーフの<br/>架空おもちゃブランドです。</p>",
             "button_label": "商品をみにいく",
             "button_url": "shopify://collections/リキプロ"
           }
@@ -43,9 +53,14 @@
           "settings": {
             "image": "shopify://shop_images/mv-3.png",
             "alt": "mv3",
+            "img-position__pc-x": 38,
+            "img-position__pc-y": 50,
+            "img-position__sp-x": 80,
+            "img-position__sp-y": 50,
             "logo": "shopify://shop_images/logo_nemurin.png",
             "logo_alt": "nemurin",
             "logo_max_width": 123,
+            "logo_max_width_sp": 90,
             "text": "<p>NEMURIN<br/>架空のベビー寝具ブランドです。<br/>本当にあったらいいな。</p>",
             "button_label": "商品をみにいく",
             "button_url": "shopify://collections/nemurin"
@@ -64,7 +79,7 @@
       "type": "top-movie",
       "name": "Movie Video",
       "settings": {
-        "youtube_url": "https://www.youtube.com/watch?v=L8JW2RkqDro"
+        "youtube_url": "https://www.youtube.com/@ecmuusan-ch"
       }
     },
     "top_about_YjqzyA": {
@@ -282,7 +297,7 @@
         "subTitle": "卸売用新規登録",
         "text": "法人様向けの製品もお取り扱いしております\n新規ご登録お待ちしております。",
         "button": "ご登録はこちらから",
-        "button_link": "shopify://pages/contact"
+        "button_link": "/account/register"
       }
     }
   },

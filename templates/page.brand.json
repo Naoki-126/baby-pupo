@@ -17,27 +17,44 @@
         "padding_bottom": 28
       }
     },
+    "image_banner_KQYJeN": {
+      "type": "image-banner",
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/insta-img2.png",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "image_behavior": "ambient",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
     "page_brand_VJ8b68": {
       "type": "page-brand",
       "blocks": {
         "image_By3tJL": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/logo_kumataro.png",
+            "image": "shopify://shop_images/mv-1.png",
             "collection": "kumataro"
           }
         },
         "image_QWAWqD": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/logo_usa.png",
+            "image": "shopify://shop_images/mv-2.png",
             "collection": "リキプロ"
           }
         },
         "image_aHyUFk": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/logo_nemurin.png",
+            "image": "shopify://shop_images/mv-3.png",
             "collection": "nemurin"
           }
         }
@@ -67,6 +84,7 @@
   },
   "order": [
     "main",
+    "image_banner_KQYJeN",
     "page_brand_VJ8b68",
     "top_register_ztD3PC"
   ]

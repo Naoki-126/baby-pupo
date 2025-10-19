@@ -15,7 +15,16 @@
             <img src="{{ product | image_url: width: 304 }}" alt="{{ product.title }}" class="list-img">
 
             <div class="ranking-textArea">
-              <h3 class="product-name"><span class="option-tag__pink">NEW</span>{{ product.title }}</h3>
+              <h3 class="product-name">
+                {% for tag in product.tags %}
+                  {% if tag contains "new_" %}
+                    <span class="option-tag__pink">
+                    {{ tag | split: "_" | last }}
+                    </span>
+                  {% endif %}
+                {% endfor %}
+                {{ product.title }}
+              </h3>
               <div class="product-price">{{ product.price | money }}(税込)</div>
             </div>
           </a>

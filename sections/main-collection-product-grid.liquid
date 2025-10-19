@@ -164,6 +164,21 @@
                     style="--animation-order: {{ forloop.index }};"
                   {% endif %}
                 >
+
+{% comment %} 
+                {% for tag in product.tags %}
+                  {% if tag contains "sale_" %}
+                    <div class="option-add__label">
+                      <p><span class="c-btn__label">{{ tag | split: "_" | last }}</span></p>
+                    </div>
+                  {% elsif tag contains "out_" %}
+                    <div class="option-add__label">
+                      <p><span class="c-btn__labelSo">{{ tag | split:"_" | last }}</span></p>
+                    </div>
+                  {% endif %}
+                {% endfor %} {% endcomment %}
+
+
                   {% render 'card-product',
                     card_product: product,
                     media_aspect_ratio: section.settings.image_ratio,

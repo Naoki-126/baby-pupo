@@ -20,6 +20,7 @@
   Usage:
   {% render 'card-product', show_vendor: section.settings.show_vendor %}
 {% endcomment %}
+
 {%- unless skip_styles -%}
   {{ 'component-rating.css' | asset_url | stylesheet_tag }}
   {{ 'component-volume-pricing.css' | asset_url | stylesheet_tag }}
@@ -41,6 +42,7 @@
     endif
   -%}
   <div class="card-wrapper product-card-wrapper underline-links-hover">
+
     <div
       class="
         card card--{{ settings.card_style }}
@@ -59,6 +61,29 @@
       >
         {%- if card_product.featured_media -%}
           <div class="card__media{% if image_shape and image_shape != 'default' %} shape--{{ image_shape }} color-{{ settings.card_color_scheme }} gradient{% endif %}">
+
+            <div class="option-add__labels">
+              {% for tag in card_product.tags %}
+                {% if tag contains "sale_" %}
+                  <div class="option-add__label">
+                    <p><span class="c-btn__label">{{ tag | split: "_" | last }}</span></p>
+                  </div>
+                {% elsif tag contains "out_" %}
+                  <div class="option-add__label">
+                    <p><span class="c-btn__labelSo">{{ tag | split:"_" | last }}</span></p>
+                  </div>
+                {% elsif tag contains "new_" %}
+                  <div class="option-add__label">
+                    <p><span class="c-btn__labelNew">{{ tag | split: "_" | last }}</span></p>
+                  </div>
+                {% elsif tag contains "rec_" %}
+                  <div class="option-add__label">
+                    <p><span class="c-btn__labelRec">{{ tag | split: "_" | last }}</span></p>
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+
             <div class="media media--transparent media--hover-effect">
               {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
               <img
@@ -124,8 +149,9 @@
               </a>
             </h3>
           </div>
+
           <div class="card__badge {{ settings.badge_position }}">
-            {%- if card_product.available == false -%}
+            {% comment %} {%- if card_product.available == false -%}
               <span
                 id="NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
                 class="badge badge--bottom-left color-{{ settings.sold_out_badge_color_scheme }}"
@@ -139,9 +165,10 @@
               >
                 {{- 'products.product.on_sale' | t -}}
               </span>
-            {%- endif -%}
+            {%- endif -%} {% endcomment %}
           </div>
         </div>
+
       </div>
       <div class="card__content">
         <div class="card__information">
@@ -548,7 +575,8 @@
             </div>
           {% endif %}
         {% endif %}
-        <div class="card__badge {{ settings.badge_position }}">
+
+        {% comment %} <div class="card__badge {{ settings.badge_position }}">
           {%- if card_product.available == false -%}
             <span
               id="Badge-{{ section_id }}-{{ card_product.id }}"
@@ -564,7 +592,8 @@
               {{- 'products.product.on_sale' | t -}}
             </span>
           {%- endif -%}
-        </div>
+        </div> {% endcomment %}
+
       </div>
     </div>
   </div>
