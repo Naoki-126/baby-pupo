@@ -633,7 +633,6 @@ body {
 		border-top: none;
 		justify-content: space-between;
 		padding: 0 10px;
-
   }
 
 	.c-header-dummy  {
@@ -700,4 +699,11 @@ body {
 
 .drawer-contents.is-checked {
 	transform: translateX(0);
+}
+
+.drawer-content__link {
+	padding: 11px 30px;
+	margin-bottom: 2px;
+	font-size: 18px;
+	color: #121212;
 }
